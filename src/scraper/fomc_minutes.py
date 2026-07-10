@@ -37,15 +37,33 @@ def discover_minutes_links(start_year: int, end_year: int, session: requests.Ses
     pages = [CALENDAR_URL] + [
         HISTORICAL_URL_TEMPLATE.format(year=year) for year in range(start_year, end_year + 1)
     ]
+    failures = 0
     for page_url in pages:
         try:
             html = fetch(page_url, session=session)
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            failures += 1
+            print(f"  [warn] could not fetch {page_url}: {exc}")
             continue
         for match in MINUTES_LINK_RE.finditer(html):
             yyyymmdd = match.group(1)
             iso_date = f"{yyyymmdd[0:4]}-{yyyymmdd[4:6]}-{yyyymmdd[6:8]}"
             links[iso_date] = f"{BASE_URL}{match.group(0)}"
+
+    if not links and failures == len(pages):
+        print(
+            "  [error] every listing page failed to fetch -- this usually means "
+            "this machine/environment can't reach federalreserve.gov (no outbound "
+            "network access, a proxy/firewall blocking it, or SSL interception). "
+            "Try `curl -I https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm` "
+            "to confirm connectivity before re-running the scraper."
+        )
+    elif not links:
+        print(
+            "  [warn] listing pages fetched successfully but no minutes links matched "
+            f"the pattern {MINUTES_LINK_RE.pattern!r} -- the Fed may have changed its "
+            "page layout; inspect the page HTML and update MINUTES_LINK_RE."
+        )
     return links
 
 

@@ -30,17 +30,36 @@ SPEECH_LINK_RE = re.compile(r"/newsevents/speech/([a-z\-]+)(\d{8})[a-z]?\.htm")
 def discover_speech_links(start_year: int, end_year: int, session: requests.Session) -> dict[str, tuple[str, str]]:
     """Return {url_id: (iso_date, absolute_url)} for speeches in [start_year, end_year]."""
     links: dict[str, tuple[str, str]] = {}
-    for year in range(start_year, end_year + 1):
+    years = list(range(start_year, end_year + 1))
+    failures = 0
+    for year in years:
         index_url = YEAR_INDEX_TEMPLATE.format(year=year)
         try:
             html = fetch(index_url, session=session)
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            failures += 1
+            print(f"  [warn] could not fetch {index_url}: {exc}")
             continue
         for match in SPEECH_LINK_RE.finditer(html):
             speaker_slug, yyyymmdd = match.groups()
             iso_date = f"{yyyymmdd[0:4]}-{yyyymmdd[4:6]}-{yyyymmdd[6:8]}"
             url_id = f"{speaker_slug}-{yyyymmdd}"
             links[url_id] = (iso_date, f"{BASE_URL}{match.group(0)}")
+
+    if not links and failures == len(years):
+        print(
+            "  [error] every year-index page failed to fetch -- this usually means "
+            "this machine/environment can't reach federalreserve.gov (no outbound "
+            "network access, a proxy/firewall blocking it, or SSL interception). "
+            "Try `curl -I https://www.federalreserve.gov/newsevents/speech/2023-speeches.htm` "
+            "to confirm connectivity before re-running the scraper."
+        )
+    elif not links:
+        print(
+            "  [warn] year-index pages fetched successfully but no speech links matched "
+            f"the pattern {SPEECH_LINK_RE.pattern!r} -- the Fed may have changed its "
+            "page layout; inspect the page HTML and update SPEECH_LINK_RE."
+        )
     return links
 
 
