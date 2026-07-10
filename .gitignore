@@ -9,6 +9,8 @@ data/raw/minutes/*
 !data/raw/minutes/.gitkeep
 data/raw/speeches/*
 !data/raw/speeches/.gitkeep
+data/raw/statements/*
+!data/raw/statements/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
 

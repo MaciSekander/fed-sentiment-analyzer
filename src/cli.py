@@ -1,5 +1,6 @@
 """Command-line entrypoint.
 
+    python -m src.cli ingest-local --archives-dir data/archives
     python -m src.cli scrape-minutes --start 2015-01-01 --end 2024-12-31
     python -m src.cli scrape-speeches --start 2015-01-01 --end 2024-12-31
     python -m src.cli analyze --input-dir data/raw/minutes --out data/processed/minutes_scores.csv
@@ -14,9 +15,20 @@ from datetime import datetime
 from pathlib import Path
 
 from src.analysis.trends import plot_trend, scores_to_dataframe
+from src.ingestion.local_archives import ingest_all
 from src.scraper.fed_speeches import scrape_speeches
 from src.scraper.fomc_minutes import scrape_minutes
 from src.sentiment.pipeline import analyze_corpus
+
+
+def _cmd_ingest_local(args: argparse.Namespace) -> None:
+    results = ingest_all(
+        archives_dir=Path(args.archives_dir),
+        minutes_out=Path(args.minutes_out),
+        statements_out=Path(args.statements_out),
+    )
+    print(f"Ingested {len(results['minutes'])} minutes documents to {args.minutes_out}")
+    print(f"Ingested {len(results['statements'])} statement documents to {args.statements_out}")
 
 
 def _cmd_scrape_minutes(args: argparse.Namespace) -> None:
@@ -55,7 +67,7 @@ def _cmd_analyze(args: argparse.Namespace) -> None:
 def _cmd_trend(args: argparse.Namespace) -> None:
     import pandas as pd
 
-    df = pd.read_csv(args.input)
+    df = pd.read_csv(args.input, parse_dates=["date"])
     out = plot_trend(df, Path(args.plot), window=args.window)
     print(f"Saved trend plot to {out}")
 
@@ -63,6 +75,14 @@ def _cmd_trend(args: argparse.Namespace) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fed-sentiment-analyzer")
     subparsers = parser.add_subparsers(dest="command", required=True)
+
+    p_ingest = subparsers.add_parser(
+        "ingest-local", help="Ingest pre-collected archives from data/archives/ (no network required)"
+    )
+    p_ingest.add_argument("--archives-dir", default="data/archives")
+    p_ingest.add_argument("--minutes-out", default="data/raw/minutes")
+    p_ingest.add_argument("--statements-out", default="data/raw/statements")
+    p_ingest.set_defaults(func=_cmd_ingest_local)
 
     p_minutes = subparsers.add_parser("scrape-minutes", help="Scrape historical FOMC minutes")
     p_minutes.add_argument("--start", required=True, help="Start date, YYYY-MM-DD")
