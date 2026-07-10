@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Scraped/generated data (kept out of git; folders tracked via .gitkeep)
+data/raw/minutes/*
+!data/raw/minutes/.gitkeep
+data/raw/speeches/*
+!data/raw/speeches/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# HuggingFace model cache if downloaded locally
+.cache/
+*.png
+!docs/**/*.png
+
+.pytest_cache/
+.ipynb_checkpoints/
