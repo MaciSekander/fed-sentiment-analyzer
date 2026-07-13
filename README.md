@@ -15,19 +15,37 @@ Two scoring signals, combined:
    stance", "downside risks"), normalized by document length. No training
    data or network access required; fully transparent — you can see
    exactly which phrases drove a score.
-2. **Transformer model** (`src/sentiment/model.py`) — wraps a HuggingFace
-   `transformers` sequence-classification model. Defaults to
-   `yiyanghkust/finbert-tone` (general financial tone: positive / negative
-   / neutral), used as a rough proxy for hawkish/dovish. If you have
-   access to a model fine-tuned specifically for FOMC hawkish/dovish/
-   neutral classification, point `--model-name` at it instead — the
-   wrapper reads the model's own label mapping and maps any label
-   containing "hawk"/"dov" directly, no code changes needed.
+2. **Transformer model** (`src/sentiment/model.py`) — defaults to
+   [`tim9510019/FOMC-RoBERTa`](https://huggingface.co/tim9510019/FOMC-RoBERTa),
+   a public mirror of `gtfintechlab/FOMC-RoBERTa`: a RoBERTa-large model
+   fine-tuned specifically to classify hawkish/dovish/neutral stance in
+   FOMC communication (the original gtfintechlab checkpoint is
+   access-gated on HuggingFace; this mirror has identical weights and is
+   freely downloadable). Its label mapping (`LABEL_0`=dovish,
+   `LABEL_1`=hawkish, `LABEL_2`=neutral) is hard-coded in `model.py` after
+   verifying it empirically against known example sentences —
+   `tests/test_model.py` checks it.
 
-`src/sentiment/pipeline.py` combines the two into a single `combined_score`
-in `[-1, 1]` (positive = hawkish, negative = dovish) and a 3-way label. The
-model is optional — everything works with `--no-model` using the lexicon
-alone if you don't want the `transformers`/`torch` dependency.
+   This model classifies one **sentence** at a time (that's what it was
+   trained on), so `score_document()` splits longer text into sentences,
+   scores each, and aggregates — a single truncated 512-token call on a
+   multi-paragraph document would silently ignore everything past the
+   first ~400 words.
+
+   You can point `--model-name` / the `HF_MODEL_NAME` env var at a
+   different model. General sentiment models like `yiyanghkust/finbert-tone`
+   (positive/negative/neutral) are supported as a fallback via a
+   positive→hawkish/negative→dovish heuristic, but that's only a rough
+   proxy — general financial tone isn't the same as policy stance (a
+   sentence about "persistently high inflation" is hawkish policy
+   language but reads as negative-tone to a generic model). Prefer the
+   default unless you have a specific reason not to.
+
+`src/sentiment/pipeline.py` combines the lexicon and model scores into a
+single `combined_score` in `[-1, 1]` (positive = hawkish, negative =
+dovish), weighted 80% model / 20% lexicon by default. The model is
+optional — everything works with `--no-model` using the lexicon alone if
+you don't want the `transformers`/`torch` dependency.
 
 ## Setup
 
@@ -104,6 +122,47 @@ March 2022 that tracks the actual 2022 rate-hiking cycle.
 python -m src.cli trend --input data/processed/minutes_scores.csv --plot data/processed/minutes_trend.png
 ```
 
+## Website (live text analyzer)
+
+A FastAPI backend + React frontend for pasting arbitrary text (a speech
+excerpt, a statement, a minutes paragraph) and getting a live hawkish/
+dovish/neutral classification, with the lexicon phrase matches and the
+per-sentence model breakdown both shown so you can see *why* it scored
+the way it did.
+
+```bash
+# Terminal 1 -- backend (needs the root requirements.txt + backend/requirements.txt)
+pip install -r requirements.txt -r backend/requirements.txt
+python -m uvicorn backend.app.main:app --reload --port 8000
+
+# Terminal 2 -- frontend
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 — the Vite dev server proxies `/api/*` to the
+backend on port 8000 (see `frontend/vite.config.ts`). The first request
+after starting the backend takes a few seconds while it downloads/loads
+the model; `GET /api/health` reports whether it loaded successfully
+(`model_loaded`) and, if not, why (`model_load_error`) — the UI falls
+back to lexicon-only scoring in that case rather than failing outright.
+
+```
+backend/
+  app/main.py           # FastAPI app + CORS
+  app/routers/analyze.py # POST /api/analyze, GET /api/health
+  app/schemas.py         # request/response models
+frontend/
+  src/App.tsx            # textarea + example buttons + results
+  src/components/        # ScoreGauge, SentenceBreakdown, LexiconHits
+  src/api.ts              # fetch wrappers
+```
+
+The backend imports directly from `src/sentiment/*` (same lexicon and
+model code the CLI uses) rather than duplicating logic — run it from the
+repo root so the `src` package resolves.
+
 ## Project layout
 
 ```
@@ -113,7 +172,9 @@ src/
   sentiment/     # lexicon.py (baseline), model.py (transformer), pipeline.py (combines both)
   analysis/      # trends.py (rolling average + plotting, with gap-aware line breaks)
   cli.py         # ingest-local / scrape-minutes / scrape-speeches / analyze / trend
-tests/           # pytest suite for the lexicon and pipeline
+backend/         # FastAPI app serving the live analyzer (see Website section)
+frontend/        # React + Vite UI for the live analyzer
+tests/           # pytest suite for the lexicon, pipeline, model, and ingestion
 data/archives/   # pre-collected source zips (committed -- this is the primary data source)
 data/raw/        # ingested/scraped/manually-added per-document .txt (gitignored, regenerable)
 data/processed/  # scored CSVs and trend plots (gitignored)
@@ -124,6 +185,10 @@ data/processed/  # scored CSVs and trend plots (gitignored)
 ```bash
 pytest tests/
 ```
+
+`tests/test_model.py` downloads the real transformer model and is
+skipped automatically if `transformers`/`torch` aren't installed or the
+model can't be reached.
 
 ## Limitations / next steps
 
@@ -146,13 +211,19 @@ pytest tests/
   low word count, not a bug, but treat single-digit-word-count-vs-score
   outliers as lower-confidence than a full multi-thousand-word minutes
   document.
-- The default transformer model (`finbert-tone`) reports general
-  positive/negative tone, which is only a proxy for hawkish/dovish stance.
-  For real accuracy here, the natural next step is fine-tuning (or finding
-  a pretrained model already fine-tuned) on a labeled hawkish/dovish/
-  neutral FOMC sentence dataset — academic work on FOMC communication
-  analysis has produced such datasets/models; swap the model name into
-  `--model-name` once you've identified and validated one.
+- The transformer classifies **individual sentences** — accuracy on a
+  full paragraph depends on aggregating those sentence-level calls
+  (`score_document()` does this), and an isolated sentence pulled out of
+  its surrounding context can occasionally get misclassified even when
+  the model is generally reliable (e.g. a short fragment like "the labor
+  market remains historically tight" can read as ambiguous without the
+  sentence before/after it). This is a real limitation of sentence-level
+  classification, not a bug — it's part of why the combined score blends
+  in the lexicon rather than trusting the model alone.
+- Scoring a long document sentence-by-sentence is much slower than one
+  truncated call, so `score_document()` caps at 150 sentences (evenly
+  sampled across the document) to keep batch runs over the full archive
+  from taking too long on CPU.
 - The scraper is best-effort against a real, evolving government website;
   treat scrape failures as "check the selectors," not "the tool is
   broken."

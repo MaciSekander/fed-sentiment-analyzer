@@ -1,0 +1,258 @@
+:root {
+  color-scheme: light dark;
+  --hawkish: #d9534f;
+  --dovish: #3b82c4;
+  --neutral: #8a8f98;
+  --bg: #0f1115;
+  --panel: #1a1d24;
+  --border: #2a2e37;
+  --text: #e6e8eb;
+  --muted: #9aa0aa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.warning {
+  background: #3a2a1a;
+  border: 1px solid #6b4a20;
+  color: #f0c987;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.input-section {
+  margin-top: 1.5rem;
+}
+
+.examples {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.example-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.example-btn:hover {
+  border-color: var(--muted);
+}
+
+textarea {
+  width: 100%;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.analyze-btn {
+  margin-top: 0.75rem;
+  background: #3b6ea5;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.analyze-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.error {
+  color: var(--hawkish);
+  margin-top: 1rem;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.score-gauge {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.score-gauge-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.score-gauge-track {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--dovish), var(--neutral), var(--hawkish));
+  margin: 0.5rem 0;
+}
+
+.score-gauge-midline {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  bottom: -4px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.score-gauge-marker {
+  position: absolute;
+  top: -6px;
+  width: 4px;
+  height: 22px;
+  background: white;
+  border-radius: 2px;
+  transform: translateX(-2px);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.score-gauge-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.score-line {
+  font-size: 0.95rem;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.label-hawkish {
+  color: var(--hawkish);
+}
+
+.label-dovish {
+  color: var(--dovish);
+}
+
+.label-neutral {
+  color: var(--neutral);
+}
+
+.lexicon-hits ul {
+  padding-left: 1.1rem;
+  margin: 0.3rem 0 0.8rem;
+  font-size: 0.88rem;
+}
+
+.sentence-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sentence-item {
+  border-left: 3px solid var(--border);
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.sentence-item.label-hawkish {
+  border-left-color: var(--hawkish);
+}
+
+.sentence-item.label-dovish {
+  border-left-color: var(--dovish);
+}
+
+.sentence-item.label-neutral {
+  border-left-color: var(--neutral);
+}
+
+.sentence-tag {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 4.5rem;
+}
+
+.sentence-text {
+  flex: 1;
+  color: var(--text);
+}
+
+.sentence-score {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}

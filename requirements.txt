@@ -6,9 +6,12 @@ matplotlib>=3.7
 python-dateutil>=2.8
 tqdm>=4.66
 
-# Optional, only needed for the transformer-based scorer (src/sentiment/model.py).
-# The lexicon baseline and CLI work without these.
-transformers>=4.35
+# Optional, only needed for the transformer-based scorer (src/sentiment/model.py)
+# and the web backend (backend/). The lexicon baseline and CLI work without these.
+# Pinned below 5.0: transformers 5.x changed tokenizer-loading behavior in a way
+# that breaks some slow (non-fast) tokenizers without extra packages.
+transformers>=4.35,<5.0
 torch>=2.0
+sentencepiece>=0.1.99
 
 pytest>=7.4

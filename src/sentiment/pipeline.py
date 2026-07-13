@@ -10,7 +10,7 @@ from pathlib import Path
 from src.scraper.utils import extract_date_from_filename
 from src.sentiment.lexicon import score_text as lexicon_score_text
 
-DEFAULT_MODEL_WEIGHT = 0.5  # 0 = lexicon only, 1 = model only
+DEFAULT_MODEL_WEIGHT = 0.8  # 0 = lexicon only, 1 = model only
 
 
 @dataclass
@@ -29,7 +29,7 @@ class DocumentScore:
         return asdict(self)
 
 
-def _label_from_score(score: float, threshold: float = 0.15) -> str:
+def label_from_score(score: float, threshold: float = 0.15) -> str:
     if score > threshold:
         return "hawkish"
     if score < -threshold:
@@ -54,7 +54,7 @@ def analyze_document(
             from src.sentiment.model import get_scorer, DEFAULT_MODEL_NAME
 
             scorer = get_scorer(model_name or DEFAULT_MODEL_NAME)
-            result = scorer.score(text)
+            result = scorer.score_document(text)
             model_score = result.score
             model_label = result.label
         except ImportError:
@@ -74,7 +74,7 @@ def analyze_document(
         model_score=model_score,
         model_label=model_label,
         combined_score=round(combined_score, 4),
-        combined_label=_label_from_score(combined_score),
+        combined_label=label_from_score(combined_score),
         word_count=lex.word_count,
     )
 
