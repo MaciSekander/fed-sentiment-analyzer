@@ -163,6 +163,48 @@ The backend imports directly from `src/sentiment/*` (same lexicon and
 model code the CLI uses) rather than duplicating logic — run it from the
 repo root so the `src` package resolves.
 
+### Deployment (HuggingFace Spaces)
+
+`Dockerfile` builds the frontend and backend into a single container
+(multi-stage: Node builds `frontend/dist`, then the Python image serves
+it plus the API from one FastAPI process on port 7860 — see
+`backend/app/main.py`, which mounts the built frontend as static files
+when present and falls back to a JSON status page in local dev, where
+there is no build). `.github/workflows/deploy-space.yml` pushes that to
+a HuggingFace Space automatically on every push to `main`.
+
+One-time setup (I can't create accounts or hold tokens on your behalf —
+this part is manual):
+
+1. Create a free account at [huggingface.co](https://huggingface.co) if
+   you don't have one.
+2. Create a new Space (huggingface.co/new-space): pick any name, **SDK:
+   Docker**, any hardware tier (free CPU basic works).
+3. Generate an access token with **write** scope: Settings → Access
+   Tokens → New token.
+4. In this GitHub repo's Settings → Secrets and variables → Actions:
+   - Add **secret** `HF_TOKEN` = the token from step 3.
+   - Add **variable** `HF_SPACE_ID` = `your-hf-username/your-space-name`
+     (from step 2).
+5. Push to `main` (or run the workflow manually from the Actions tab) —
+   the Action builds a fresh deploy directory (backend + src + frontend
+   + Dockerfile + a Space-specific `README.md` with the required HF
+   config header) and force-pushes it to the Space's git repo.
+
+Your Space will be live at
+`https://huggingface.co/spaces/your-hf-username/your-space-name`. The
+first request after a cold start takes 10-30 seconds while the model
+loads.
+
+To test the container locally before relying on the Action (requires
+Docker):
+
+```bash
+docker build -t fed-sentiment-analyzer .
+docker run -p 7860:7860 fed-sentiment-analyzer
+# open http://localhost:7860
+```
+
 ## Project layout
 
 ```
@@ -174,6 +216,9 @@ src/
   cli.py         # ingest-local / scrape-minutes / scrape-speeches / analyze / trend
 backend/         # FastAPI app serving the live analyzer (see Website section)
 frontend/        # React + Vite UI for the live analyzer
+Dockerfile       # single-container build for deployment (see Deployment section)
+deploy/          # space_README.md -- HF Spaces config header, copied in at deploy time
+.github/workflows/deploy-space.yml  # auto-deploy to HF Spaces on push to main
 tests/           # pytest suite for the lexicon, pipeline, model, and ingestion
 data/archives/   # pre-collected source zips (committed -- this is the primary data source)
 data/raw/        # ingested/scraped/manually-added per-document .txt (gitignored, regenerable)

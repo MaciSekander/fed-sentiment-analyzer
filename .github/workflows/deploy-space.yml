@@ -1,0 +1,51 @@
+name: Deploy to Hugging Face Spaces
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required secrets are set
+        run: |
+          if [ -z "${{ secrets.HF_TOKEN }}" ]; then
+            echo "::error::HF_TOKEN secret is not set. Add a HuggingFace write token as a repo secret named HF_TOKEN (Settings > Secrets and variables > Actions)."
+            exit 1
+          fi
+          if [ -z "${{ vars.HF_SPACE_ID }}" ]; then
+            echo "::error::HF_SPACE_ID variable is not set. Add it as a repo variable (Settings > Secrets and variables > Actions > Variables), format: your-hf-username/your-space-name"
+            exit 1
+          fi
+
+      - name: Assemble deploy directory
+        run: |
+          set -e
+          mkdir -p /tmp/space_deploy
+          cp -r backend /tmp/space_deploy/
+          cp -r src /tmp/space_deploy/
+          cp -r frontend /tmp/space_deploy/
+          rm -rf /tmp/space_deploy/frontend/node_modules /tmp/space_deploy/frontend/dist
+          cp requirements.txt /tmp/space_deploy/
+          cp Dockerfile /tmp/space_deploy/
+          cp .dockerignore /tmp/space_deploy/
+          cp deploy/space_README.md /tmp/space_deploy/README.md
+
+      - name: Push to Space
+        working-directory: /tmp/space_deploy
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE_ID: ${{ vars.HF_SPACE_ID }}
+        run: |
+          set -e
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy from ${{ github.repository }}@${{ github.sha }}"
+          git remote add space "https://user:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE_ID}"
+          git push --force space HEAD:main
