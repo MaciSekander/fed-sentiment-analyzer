@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 
 from fastapi import APIRouter
 
@@ -29,6 +30,15 @@ def _get_scorer():
     global _scorer, _scorer_load_error
     if _scorer is not None or _scorer_load_error is not None:
         return _scorer
+
+    if os.environ.get("DISABLE_MODEL"):
+        # Set on low-RAM deploy targets (e.g. free tiers capped around
+        # 512MB) where the RoBERTa-large weights won't fit -- skips the
+        # torch/transformers import entirely rather than attempting a load
+        # that would get OOM-killed. /api/health and /api/analyze both
+        # already treat a load failure as "fall back to lexicon-only".
+        _scorer_load_error = "model disabled via DISABLE_MODEL env var"
+        return None
 
     try:
         from src.sentiment.model import DEFAULT_MODEL_NAME, get_scorer
