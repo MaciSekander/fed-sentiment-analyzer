@@ -258,22 +258,32 @@ docker run -p 7860:7860 fed-sentiment-analyzer
 HuggingFace Spaces' free `cpu-basic` tier has 16GB RAM, plenty for the
 transformer. Some other free hosts (Render's free web-service tier, for
 one) cap around 512MB, which the RoBERTa-large model won't fit in
-(~1.4GB+ just for the fp32 weights). Set the `DISABLE_MODEL` environment
-variable (to any non-empty value) on a host like that and the backend
-skips importing torch/transformers entirely, falling back to lexicon-only
-scoring for the Analyze tab (`backend/app/routers/analyze.py`'s
-`_get_scorer()` short-circuits on it) -- the exact same graceful-fallback
-path already used when the model fails to load for any other reason, so
-the frontend's "model unavailable" banner and lexicon-only combined score
-work unchanged. `/api/history` is unaffected by this flag either way,
-since it never loads the model.
+(~1.4GB+ just for the fp32 weights). `backend/app/routers/analyze.py`'s
+`_get_scorer()` handles this two ways:
+
+- **Automatically**: it reads `/proc/meminfo` and skips loading the model
+  on any host with less than ~1GB RAM, before ever attempting the load --
+  this is the important one, since a failed *attempt* on a 512MB host
+  doesn't raise a catchable Python error the way a missing dependency
+  does, it gets the whole process OOM-killed, which resets the
+  in-process "already tried and failed" state on restart and repeats the
+  failed load on the next request forever. This needs no configuration
+  and works the same on Render, HF Spaces, or anywhere else.
+- **Manually**: set the `DISABLE_MODEL` environment variable (to any
+  non-empty value) to force the same fallback regardless of host RAM
+  (e.g. for testing it locally).
+
+Either way, the fallback is the exact same graceful-degradation path
+already used when the model fails to load for any other reason, so the
+frontend's "model unavailable" banner and lexicon-only combined score
+work unchanged. `/api/history` is unaffected either way, since it never
+loads the model.
 
 The same `Dockerfile` works unmodified on Render (or any other
 Docker-based host): connect the GitHub repo, environment **Docker**, no
-build/start command needed, and set `DISABLE_MODEL=1` in that service's
-environment variables if its RAM is constrained. Render's Docker builder
-already reads the `PORT` it injects and this Dockerfile's `CMD` already
-listens on `$PORT`, so no port configuration is needed either.
+build/start command or env var needed. Render's Docker builder already
+reads the `PORT` it injects and this Dockerfile's `CMD` already listens
+on `$PORT`, so no port configuration is needed either.
 
 ## Project layout
 

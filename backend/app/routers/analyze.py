@@ -23,6 +23,28 @@ _scorer = None
 _scorer_load_error: str | None = None
 
 
+def _low_memory_host(threshold_mb: int = 1024) -> bool:
+    """Best-effort check for constrained hosts (e.g. a free tier capped
+    around 512MB) where loading the ~1.4GB RoBERTa-large model wouldn't
+    raise a catchable error -- it would get the whole process OOM-killed,
+    which resets these module-level globals on restart and retries (and
+    fails) the load again on the next request, forever. Reads
+    /proc/meminfo (Linux containers only -- this is exactly the kind of
+    host this guards against; harmlessly returns False everywhere else,
+    e.g. local macOS dev or a host with plenty of RAM) so low-RAM hosts
+    are safe automatically, without depending on DISABLE_MODEL having
+    been set correctly on every deploy target.
+    """
+    try:
+        with open("/proc/meminfo") as f:
+            for line in f:
+                if line.startswith("MemTotal:"):
+                    return int(line.split()[1]) < threshold_mb * 1024
+    except (OSError, ValueError, IndexError):
+        pass
+    return False
+
+
 def _get_scorer():
     """Lazily load the transformer once per process, remembering failure
     reason so /api/health can report it instead of retrying every request.
@@ -38,6 +60,10 @@ def _get_scorer():
         # that would get OOM-killed. /api/health and /api/analyze both
         # already treat a load failure as "fall back to lexicon-only".
         _scorer_load_error = "model disabled via DISABLE_MODEL env var"
+        return None
+
+    if _low_memory_host():
+        _scorer_load_error = "model disabled automatically: host has less RAM than the model needs"
         return None
 
     try:
