@@ -1,0 +1,67 @@
+name: Refresh FOMC data
+
+on:
+  schedule:
+    # Every Monday -- FOMC meets roughly every 6-7 weeks and minutes
+    # publish ~3 weeks after the meeting, so weekly is frequent enough to
+    # pick up a new release promptly without scraping daily for no reason.
+    # Fed funds rate data (monthly, independent of the FOMC calendar) gets
+    # refreshed on the same cadence either way.
+    - cron: "0 13 * * 1"
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt -r backend/requirements.txt
+
+      - name: Determine latest known meeting date
+        id: latest
+        run: |
+          DATE=$(python3 -c "import json; data = json.load(open('backend/app/static/history.json')); dates = [p['date'] for p in data['points'] if p['date'] and p['doc_id']]; print(max(dates))")
+          echo "Latest known meeting: $DATE"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild local archive corpus
+        run: python -m src.cli ingest-local
+
+      - name: Scrape any new minutes since the last known meeting
+        run: |
+          START=$(python3 -c "from datetime import datetime, timedelta; print((datetime.strptime('${{ steps.latest.outputs.date }}', '%Y-%m-%d').date() + timedelta(days=1)).isoformat())")
+          END=$(date -u +%Y-%m-%d)
+          echo "Scraping minutes from $START to $END"
+          python -m src.cli scrape-minutes --start "$START" --end "$END" --out data/raw/minutes
+
+      - name: Rebuild scored dataset (lexicon-only -- see README on why)
+        run: python -m src.cli analyze --input-dir data/raw/minutes --out data/processed/minutes_scores.csv --no-model
+
+      - name: Rebuild history.json
+        run: python -m src.cli history --input data/processed/minutes_scores.csv --out backend/app/static/history.json
+
+      - name: Rebuild document drill-down details
+        run: python -m src.cli documents --scores data/processed/minutes_scores.csv --out backend/app/static/documents/
+
+      - name: Refresh Fed funds rate
+        run: python -m src.cli fetch-fedfunds --out backend/app/static/fedfunds.json
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add backend/app/static/history.json backend/app/static/documents/ backend/app/static/fedfunds.json
+          if git diff --cached --quiet; then
+            echo "No changes -- nothing to commit."
+          else
+            git commit -m "Automated data refresh: $(date -u +%Y-%m-%d)"
+            git push
+          fi

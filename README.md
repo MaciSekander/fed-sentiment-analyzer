@@ -266,7 +266,11 @@ it plus the API from one FastAPI process on port 7860 — see
 `backend/app/main.py`, which mounts the built frontend as static files
 when present and falls back to a JSON status page in local dev, where
 there is no build). `.github/workflows/deploy-space.yml` pushes that to
-a HuggingFace Space automatically on every push to `main`.
+a HuggingFace Space automatically on every push to `main` -- but only
+after its `test` job passes (`pytest`, `tsc`/`vite build`, and the
+Playwright browser tests below); `deploy` has a hard `needs: test`
+dependency, so a broken commit can't silently go live the way it could
+before this job existed.
 
 One-time setup (I can't create accounts or hold tokens on your behalf —
 this part is manual):
@@ -368,6 +372,48 @@ pytest tests/
 `tests/test_model.py` downloads the real transformer model and is
 skipped automatically if `transformers`/`torch` aren't installed or the
 model can't be reached.
+
+### Browser interaction tests (Playwright)
+
+`pytest` only covers backend logic -- it can't catch a broken frontend
+interaction (this repo shipped exactly that once: a chart click handler
+silently read an event property that didn't exist in the installed
+Recharts version, so clicking a point to open the document drill-down
+did nothing, undetected by any of the checks above). `frontend/tests-e2e/`
+covers the interactions that matter: switching tabs, the Analyze flow,
+and clicking a History chart point to open the drill-down.
+
+```bash
+cd frontend
+npx playwright install --with-deps chromium   # one-time, downloads a headless browser
+npm run test:e2e
+```
+
+Runs against the real backend + frontend dev servers (`playwright.config.ts`'s
+`webServer` array starts both, or reuses them if already running locally),
+not a mock -- the whole point is to exercise the real integration. This
+also runs in CI as part of `deploy-space.yml`'s `test` job.
+
+## Automated data refresh
+
+`.github/workflows/refresh-data.yml` runs weekly (also runnable on demand
+from the Actions tab) and closes the "this data goes stale" gap:
+
+1. Reads the latest meeting date already in the committed `history.json`.
+2. Re-ingests the local archives, then scrapes any FOMC minutes newer than
+   that date from federalreserve.gov (most weeks this finds nothing new --
+   FOMC meets roughly every 6-7 weeks, minutes publish ~3 weeks after --
+   which is fine, `scrape-minutes` just saves 0 documents and the rest of
+   the job is a no-op).
+3. Rebuilds `history.json`, `documents/`, and `fedfunds.json` (the Fed
+   funds rate refreshes every run regardless, since it's monthly data
+   independent of the FOMC calendar).
+4. Commits and pushes only if something actually changed -- which, since
+   it pushes to `main`, automatically triggers `deploy-space.yml` (tests,
+   then deploy) the same as any other push.
+
+Speeches aren't included -- nothing in the website currently uses
+`scrape-speeches`'s output, so refreshing it would just be unused data.
 
 ## Limitations / next steps
 

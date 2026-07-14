@@ -11,7 +11,6 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-  type MouseHandlerDataParam,
 } from "recharts";
 import type { HistoryResponse } from "../api";
 import { HISTORY_CHART_SYNC_ID, parseDateToTs as toTs } from "../lib/chartTime";
@@ -65,18 +64,34 @@ export default function Timeline({ history, domain, onSelectDocument }: Props) {
     [history.points],
   );
 
-  // Recharts v3 changed this event shape from v2 -- there's no
-  // `activePayload` on the chart-level click event anymore, only
-  // activeTooltipIndex (the array index into `data`, as string or number
-  // depending on chart type). Look the point up in chartData ourselves.
-  function handleClick(state: MouseHandlerDataParam) {
-    if (state.activeTooltipIndex === undefined || state.activeTooltipIndex === null) return;
-    const index = Number(state.activeTooltipIndex);
-    if (Number.isNaN(index)) return;
-    const point = chartData[index];
-    if (point?.doc_id) {
-      onSelectDocument?.(point.doc_id);
+  // The chart-level onClick event (via activeTooltipIndex/activePayload)
+  // turned out to be unreliable in this Recharts version -- confirmed
+  // empirically with a real headless-browser click that it fires with
+  // stale/null state (a race against the hover-state update), flaky
+  // roughly 2 times out of 3. It also structurally can't work on touch
+  // devices at all, since there's no hover phase before a tap. A real,
+  // independent SVG element per point sidesteps both problems entirely --
+  // it's a native click/tap target, not dependent on chart-wide gesture
+  // state being in sync.
+  function renderClickableDot(props: { cx?: number; cy?: number; payload?: ChartPoint }) {
+    const { cx, cy, payload } = props;
+    if (cx === undefined || cy === undefined || !payload?.doc_id || !onSelectDocument) {
+      return <g key={`dot-${payload?.ts ?? cx}`} />;
     }
+    const docId = payload.doc_id;
+    return (
+      <circle
+        key={`dot-${docId}`}
+        className="timeline-point"
+        cx={cx}
+        cy={cy}
+        r={7}
+        fill="transparent"
+        pointerEvents="all"
+        style={{ cursor: "pointer" }}
+        onClick={() => onSelectDocument(docId)}
+      />
+    );
   }
 
   const gradientOffset = useMemo(() => {
@@ -96,8 +111,6 @@ export default function Timeline({ history, domain, onSelectDocument }: Props) {
           margin={{ top: 8, right: 12, left: -8, bottom: 0 }}
           syncId={HISTORY_CHART_SYNC_ID}
           syncMethod="value"
-          onClick={handleClick}
-          className={onSelectDocument ? "chart-clickable" : undefined}
         >
           <defs>
             <linearGradient id="rollingFill" x1="0" y1="0" x2="0" y2="1">
@@ -187,7 +200,7 @@ export default function Timeline({ history, domain, onSelectDocument }: Props) {
             dataKey="rolling"
             stroke="var(--text)"
             strokeWidth={2}
-            dot={false}
+            dot={renderClickableDot}
             connectNulls={false}
             isAnimationActive={false}
             name={`${history.window}-doc rolling average`}
