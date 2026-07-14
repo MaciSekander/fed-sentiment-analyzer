@@ -332,12 +332,21 @@ model can't be reached.
   before 1994, via `score_text`'s `date` argument) instead key off
   announced discount-rate changes -- validated against this repo's own
   1967-1993 archive by grepping for real recurring phrasing rather than
-  guessed. This means most classic-era meetings still legitimately score
-  neutral (most meetings didn't change the discount rate), but the ones
-  that did line up well with actual history -- e.g. hawkish at the
-  October 1979 Volcker shift and the 1980-81 tightening, dovish at the
-  August 1982 pivot and the 1984-86 easing cycle. If you need denser
-  signal than "was a rate change announced this meeting", that's still a
+  guessed. Scored as isolated per-meeting events, a rate change would
+  otherwise read as a sharp spike snapping straight back to neutral at the
+  very next meeting -- which understates reality, since a hike or cut sets
+  a policy stance that persists until the next action. The website's
+  History tab (not the CLI `analyze`/`trend` commands, which report the
+  raw per-meeting event score) applies `src/analysis/history.py`'s
+  `_carry_forward_classic_signal()` on top: it carries the last classic-era
+  signal forward with exponential decay (`CLASSIC_DECAY_PER_MEETING`,
+  resetting at an archive gap or the 1994 cutoff) so the chart reads as a
+  smooth "regime" rather than noise. This lines up well with actual
+  history -- e.g. a sustained hawkish stance through the October 1979
+  Volcker shift and the 1980-81 tightening (with a brief, correct dip
+  for the mid-1980 credit-controls easing), decaying through 1982 before
+  flipping decisively dovish exactly at the August 1982 pivot. If you need
+  denser signal than "was a rate change announced this meeting", that's still a
   real gap -- the boilerplate "somewhat greater/lesser reserve restraint"
   language from that era was investigated and deliberately excluded (see
   the comment above `CLASSIC_ERA_CUTOFF`): it almost always appears as a

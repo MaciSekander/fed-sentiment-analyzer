@@ -17,6 +17,50 @@ import pandas as pd
 from src.analysis.fed_regimes import FED_CHAIRS, chair_for_date
 from src.analysis.trends import rolling_trend, with_gap_breaks
 from src.sentiment.lexicon import CLASSIC_ERA_CUTOFF
+from src.sentiment.pipeline import label_from_score
+
+# The classic-era lexicon only fires on discrete discount-rate-change
+# announcements (see lexicon.py's module docstring) -- most meetings score
+# exactly 0.0. Scored as isolated events, that reads as a sharp spike
+# snapping straight back to zero at the very next meeting, which
+# understates reality: a rate hike sets a policy stance that persists
+# until the next action, not just for one meeting. CLASSIC_DECAY_PER_MEETING
+# carries the last signal forward, fading it out over subsequent
+# no-action meetings rather than dropping it to neutral immediately.
+CLASSIC_DECAY_PER_MEETING = 0.85
+CLASSIC_DECAY_FLOOR = 0.05
+
+
+def _carry_forward_classic_signal(df: pd.DataFrame, gap_threshold_days: int) -> pd.DataFrame:
+    df = df.sort_values("date").reset_index(drop=True)
+    carried = 0.0
+    prev_date = None
+    for i in range(len(df)):
+        date = df.at[i, "date"]
+        if pd.isna(date):
+            prev_date = None
+            carried = 0.0
+            continue
+        if prev_date is not None and (date - prev_date).days > gap_threshold_days:
+            carried = 0.0  # don't carry a stale signal across an archive gap
+        prev_date = date
+
+        if date.strftime("%Y-%m-%d") >= CLASSIC_ERA_CUTOFF:
+            carried = 0.0
+            continue
+
+        score = df.at[i, "combined_score"]
+        if pd.isna(score):
+            continue
+        if score != 0:
+            carried = score
+        else:
+            carried *= CLASSIC_DECAY_PER_MEETING
+            if abs(carried) < CLASSIC_DECAY_FLOOR:
+                carried = 0.0
+            df.at[i, "combined_score"] = round(carried, 4)
+            df.at[i, "combined_label"] = label_from_score(carried)
+    return df
 
 
 def _detect_gaps(df: pd.DataFrame, threshold_days: int) -> list[dict]:
@@ -45,6 +89,7 @@ def _detect_gaps(df: pd.DataFrame, threshold_days: int) -> list[dict]:
 
 
 def build_history(df: pd.DataFrame, window: int = 3, gap_threshold_days: int = 180) -> dict:
+    df = _carry_forward_classic_signal(df, gap_threshold_days=gap_threshold_days)
     df = rolling_trend(df, window=window)
     annotations = _detect_gaps(df, threshold_days=gap_threshold_days)
     df = with_gap_breaks(df, threshold_days=gap_threshold_days)

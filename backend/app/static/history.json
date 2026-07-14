@@ -67,48 +67,48 @@
     {
       "doc_id": "1968-01-09-fomc-minutes",
       "date": "1968-01-09",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.9500000000000001,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-02-06-fomc-minutes",
       "date": "1968-02-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-03-05-fomc-minutes",
       "date": "1968-03-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-03-14-fomc-minutes",
       "date": "1968-03-14",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-04-02-fomc-minutes",
       "date": "1968-04-02",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-04-19-fomc-minutes",
       "date": "1968-04-19",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.6552333333333333,
       "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
@@ -116,151 +116,151 @@
       "doc_id": "1968-04-30-fomc-minutes",
       "date": "1968-04-30",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.6666666666666666,
+      "combined_score_rolling": 0.8145666666666666,
       "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-05-28-fomc-minutes",
       "date": "1968-05-28",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.9500000000000001,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-06-18-fomc-minutes",
       "date": "1968-06-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-07-16-fomc-minutes",
       "date": "1968-07-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-08-13-fomc-minutes",
       "date": "1968-08-13",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-08-19-fomc-minutes",
       "date": "1968-08-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-09-10-fomc-minutes",
       "date": "1968-09-10",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.4476,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-10-08-fomc-minutes",
       "date": "1968-10-08",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3206,
+      "combined_score_rolling": 0.3804666666666667,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-10-29-fomc-minutes",
       "date": "1968-10-29",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2725,
+      "combined_score_rolling": 0.32339999999999997,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-11-26-fomc-minutes",
       "date": "1968-11-26",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2316,
+      "combined_score_rolling": 0.2749,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1968-12-17-fomc-minutes",
       "date": "1968-12-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1969,
+      "combined_score_rolling": 0.2336666666666667,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-02-04-fomc-minutes",
       "date": "1969-02-04",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1673,
+      "combined_score_rolling": 0.1986,
+      "combined_label": "hawkish",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-03-04-fomc-minutes",
       "date": "1969-03-04",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.1422,
+      "combined_score_rolling": 0.16879999999999998,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-04-01-fomc-minutes",
       "date": "1969-04-01",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.1209,
+      "combined_score_rolling": 0.14346666666666666,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-04-29-fomc-minutes",
       "date": "1969-04-29",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.1028,
+      "combined_score_rolling": 0.12196666666666667,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-05-27-fomc-minutes",
       "date": "1969-05-27",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0874,
+      "combined_score_rolling": 0.1037,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-06-24-fomc-minutes",
       "date": "1969-06-24",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0743,
+      "combined_score_rolling": 0.08816666666666667,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-07-15-fomc-minutes",
       "date": "1969-07-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0631,
+      "combined_score_rolling": 0.07493333333333334,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
     {
       "doc_id": "1969-08-12-fomc-minutes",
       "date": "1969-08-12",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0536,
+      "combined_score_rolling": 0.06366666666666668,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
@@ -268,7 +268,7 @@
       "doc_id": "1969-09-09-fomc-minutes",
       "date": "1969-09-09",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score_rolling": 0.0389,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
@@ -276,7 +276,7 @@
       "doc_id": "1969-10-07-fomc-minutes",
       "date": "1969-10-07",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score_rolling": 0.017866666666666666,
       "combined_label": "neutral",
       "chair": "William McChesney Martin Jr."
     },
@@ -427,192 +427,192 @@
     {
       "doc_id": "1971-03-09-fomc-minutes",
       "date": "1971-03-09",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.9500000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-04-06-fomc-minutes",
       "date": "1971-04-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-05-11-fomc-minutes",
       "date": "1971-05-11",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-06-08-fomc-minutes",
       "date": "1971-06-08",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-06-29-fomc-minutes",
       "date": "1971-06-29",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5266000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-07-27-fomc-minutes",
       "date": "1971-07-27",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.011433333333333295,
       "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-08-24-fomc-minutes",
       "date": "1971-08-24",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.4687666666666666,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-09-21-fomc-minutes",
       "date": "1971-09-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-10-19-fomc-minutes",
       "date": "1971-10-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-11-16-fomc-minutes",
       "date": "1971-11-16",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": 0.11219999999999992,
       "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1971-12-14-fomc-minutes",
       "date": "1971-12-14",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.41196666666666665,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-01-11-fomc-minutes",
       "date": "1972-01-11",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8575,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-02-15-fomc-minutes",
       "date": "1972-02-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666668,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-03-21-fomc-minutes",
       "date": "1972-03-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-04-17-fomc-minutes",
       "date": "1972-04-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5266000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-04-18-fomc-minutes",
       "date": "1972-04-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.44760000000000005,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-05-23-fomc-minutes",
       "date": "1972-05-23",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.38046666666666673,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-06-20-fomc-minutes",
       "date": "1972-06-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2725,
+      "combined_score_rolling": -0.3234000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-07-18-fomc-minutes",
       "date": "1972-07-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2316,
+      "combined_score_rolling": -0.2749000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-08-15-fomc-minutes",
       "date": "1972-08-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1969,
+      "combined_score_rolling": -0.23366666666666677,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-09-19-fomc-minutes",
       "date": "1972-09-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1673,
+      "combined_score_rolling": -0.19860000000000008,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-10-17-fomc-minutes",
       "date": "1972-10-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.1422,
+      "combined_score_rolling": -0.16880000000000006,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-11-21-fomc-minutes",
       "date": "1972-11-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.1209,
+      "combined_score_rolling": -0.14346666666666674,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1972-12-19-fomc-minutes",
       "date": "1972-12-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.1028,
+      "combined_score_rolling": -0.12196666666666674,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
@@ -620,199 +620,199 @@
       "doc_id": "1973-01-16-fomc-minutes",
       "date": "1973-01-16",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.2587666666666666,
       "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-02-13-fomc-minutes",
       "date": "1973-02-13",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.5823999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-03-20-fomc-minutes",
       "date": "1973-03-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-04-17-fomc-minutes",
       "date": "1973-04-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-05-15-fomc-minutes",
       "date": "1973-05-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333332,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-06-19-fomc-minutes",
       "date": "1973-06-19",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.7120333333333333,
       "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-07-09-fomc-minutes",
       "date": "1973-07-09",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.7906666666666665,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-07-17-fomc-minutes",
       "date": "1973-07-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-08-21-fomc-minutes",
       "date": "1973-08-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-09-18-fomc-minutes",
       "date": "1973-09-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333332,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-10-16-fomc-minutes",
       "date": "1973-10-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5265999999999998,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-11-20-fomc-minutes",
       "date": "1973-11-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.44759999999999994,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1973-12-18-fomc-minutes",
       "date": "1973-12-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3206,
+      "combined_score_rolling": 0.38046666666666656,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-01-22-fomc-minutes",
       "date": "1974-01-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2725,
+      "combined_score_rolling": 0.3233999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-02-20-fomc-minutes",
       "date": "1974-02-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2316,
+      "combined_score_rolling": 0.2748999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-03-19-fomc-minutes",
       "date": "1974-03-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1969,
+      "combined_score_rolling": 0.2336666666666666,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-04-16-fomc-minutes",
       "date": "1974-04-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1673,
+      "combined_score_rolling": 0.19859999999999992,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-05-21-fomc-minutes",
       "date": "1974-05-21",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.45473333333333327,
       "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-06-18-fomc-minutes",
       "date": "1974-06-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.6724333333333333,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-07-16-fomc-minutes",
       "date": "1974-07-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-08-20-fomc-minutes",
       "date": "1974-08-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-09-10-fomc-minutes",
       "date": "1974-09-10",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-10-15-fomc-minutes",
       "date": "1974-10-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-11-19-fomc-minutes",
       "date": "1974-11-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.4476,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1974-12-17-fomc-minutes",
       "date": "1974-12-17",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": -0.05973333333333334,
       "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
@@ -820,247 +820,247 @@
       "doc_id": "1975-01-21-fomc-minutes",
       "date": "1975-01-21",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.5409666666666667,
       "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-02-19-fomc-minutes",
       "date": "1975-02-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.9500000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-03-18-fomc-minutes",
       "date": "1975-03-18",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.9500000000000001,
       "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-04-15-fomc-minutes",
       "date": "1975-04-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.9,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-05-20-fomc-minutes",
       "date": "1975-05-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-06-17-fomc-minutes",
       "date": "1975-06-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-07-15-fomc-minutes",
       "date": "1975-07-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-08-19-fomc-minutes",
       "date": "1975-08-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5266,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-09-16-fomc-minutes",
       "date": "1975-09-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.4476,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-10-21-fomc-minutes",
       "date": "1975-10-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.3804666666666667,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-11-18-fomc-minutes",
       "date": "1975-11-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2725,
+      "combined_score_rolling": -0.32339999999999997,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1975-12-16-fomc-minutes",
       "date": "1975-12-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2316,
+      "combined_score_rolling": -0.2749,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-01-20-fomc-minutes",
       "date": "1976-01-20",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": -0.5013666666666666,
       "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-02-18-fomc-minutes",
       "date": "1976-02-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.6938666666666666,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-03-16-fomc-minutes",
       "date": "1976-03-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-04-20-fomc-minutes",
       "date": "1976-04-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-05-18-fomc-minutes",
       "date": "1976-05-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-06-22-fomc-minutes",
       "date": "1976-06-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5266000000000001,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-07-20-fomc-minutes",
       "date": "1976-07-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.4476,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-08-17-fomc-minutes",
       "date": "1976-08-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.3804666666666667,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-09-21-fomc-minutes",
       "date": "1976-09-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2725,
+      "combined_score_rolling": -0.32339999999999997,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-10-19-fomc-minutes",
       "date": "1976-10-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2316,
+      "combined_score_rolling": -0.2749,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-11-08-fomc-minutes",
       "date": "1976-11-08",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1969,
+      "combined_score_rolling": -0.2336666666666667,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-11-16-fomc-minutes",
       "date": "1976-11-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1673,
+      "combined_score_rolling": -0.1986,
+      "combined_label": "dovish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1976-12-21-fomc-minutes",
       "date": "1976-12-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.1422,
+      "combined_score_rolling": -0.16879999999999998,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-01-18-fomc-minutes",
       "date": "1977-01-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.1209,
+      "combined_score_rolling": -0.14346666666666666,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-02-15-fomc-minutes",
       "date": "1977-02-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.1028,
+      "combined_score_rolling": -0.12196666666666667,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-03-15-fomc-minutes",
       "date": "1977-03-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.0874,
+      "combined_score_rolling": -0.1037,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-04-19-fomc-minutes",
       "date": "1977-04-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.0743,
+      "combined_score_rolling": -0.08816666666666667,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-05-17-fomc-minutes",
       "date": "1977-05-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.0631,
+      "combined_score_rolling": -0.07493333333333334,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-06-21-fomc-minutes",
       "date": "1977-06-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": -0.0536,
+      "combined_score_rolling": -0.06366666666666668,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
@@ -1068,7 +1068,7 @@
       "doc_id": "1977-07-19-fomc-minutes",
       "date": "1977-07-19",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score_rolling": -0.0389,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
@@ -1076,7 +1076,7 @@
       "doc_id": "1977-08-16-fomc-minutes",
       "date": "1977-08-16",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score_rolling": -0.017866666666666666,
       "combined_label": "neutral",
       "chair": "Arthur Burns"
     },
@@ -1091,120 +1091,120 @@
     {
       "doc_id": "1977-10-18-fomc-minutes",
       "date": "1977-10-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.6166666666666667,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-11-15-fomc-minutes",
       "date": "1977-11-15",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.6666666666666666,
+      "combined_score_rolling": 0.9500000000000001,
       "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1977-12-20-fomc-minutes",
       "date": "1977-12-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.9,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1978-01-17-fomc-minutes",
       "date": "1978-01-17",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.6666666666666666,
+      "combined_score_rolling": 0.9499999999999998,
       "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1978-02-28-fomc-minutes",
       "date": "1978-02-28",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.8999999999999999,
+      "combined_label": "hawkish",
       "chair": "Arthur Burns"
     },
     {
       "doc_id": "1978-03-10-fomc-minutes",
       "date": "1978-03-10",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-03-21-fomc-minutes",
       "date": "1978-03-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-04-18-fomc-minutes",
       "date": "1978-04-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-05-05-fomc-minutes",
       "date": "1978-05-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-05-16-fomc-minutes",
       "date": "1978-05-16",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.6552333333333333,
       "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-06-20-fomc-minutes",
       "date": "1978-06-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.7645666666666666,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-07-18-fomc-minutes",
       "date": "1978-07-18",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.6666666666666666,
+      "combined_score_rolling": 0.9499999999999998,
       "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-08-15-fomc-minutes",
       "date": "1978-08-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.8999999999999999,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-09-08-fomc-minutes",
       "date": "1978-09-08",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1978-09-19-fomc-minutes",
       "date": "1978-09-19",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.8574999999999999,
       "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
@@ -1212,7 +1212,7 @@
       "doc_id": "1978-10-17-fomc-minutes",
       "date": "1978-10-17",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.6666666666666666,
+      "combined_score_rolling": 0.9075000000000001,
       "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
@@ -1227,168 +1227,168 @@
     {
       "doc_id": "1978-12-19-fomc-minutes",
       "date": "1978-12-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.9499999999999998,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-02-06-fomc-minutes",
       "date": "1979-02-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-03-02-fomc-minutes",
       "date": "1979-03-02",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-03-20-fomc-minutes",
       "date": "1979-03-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-04-17-fomc-minutes",
       "date": "1979-04-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5265999999999998,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-05-22-fomc-minutes",
       "date": "1979-05-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.4476,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-07-11-fomc-minutes",
       "date": "1979-07-11",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3206,
+      "combined_score_rolling": 0.3804666666666667,
+      "combined_label": "hawkish",
       "chair": "G. William Miller"
     },
     {
       "doc_id": "1979-08-14-fomc-minutes",
       "date": "1979-08-14",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2725,
+      "combined_score_rolling": 0.32339999999999997,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1979-09-18-fomc-minutes",
       "date": "1979-09-18",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.5310333333333334,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1979-11-20-fomc-minutes",
       "date": "1979-11-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.7075,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-01-09-fomc-minutes",
       "date": "1980-01-09",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-02-05-fomc-minutes",
       "date": "1980-02-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-03-07-fomc-minutes",
       "date": "1980-03-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-03-18-fomc-minutes",
       "date": "1980-03-18",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.7120333333333333,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-04-22-fomc-minutes",
       "date": "1980-04-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.7906666666666666,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-05-06-fomc-minutes",
       "date": "1980-05-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8575,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-05-20-fomc-minutes",
       "date": "1980-05-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666668,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-07-09-fomc-minutes",
       "date": "1980-07-09",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": 0.11220000000000001,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-08-12-fomc-minutes",
       "date": "1980-08-12",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.41196666666666665,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-09-16-fomc-minutes",
       "date": "1980-09-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-10-21-fomc-minutes",
       "date": "1980-10-21",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": -0.19083333333333333,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
@@ -1396,175 +1396,175 @@
       "doc_id": "1980-11-18-fomc-minutes",
       "date": "1980-11-18",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.6666666666666666,
+      "combined_score_rolling": 0.4258333333333333,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-11-26-fomc-minutes",
       "date": "1980-11-26",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.9500000000000001,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-12-05-fomc-minutes",
       "date": "1980-12-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8575,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-12-12-fomc-minutes",
       "date": "1980-12-12",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666668,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1980-12-19-fomc-minutes",
       "date": "1980-12-19",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.7788666666666666,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-02-03-fomc-minutes",
       "date": "1981-02-03",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.8213666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-02-24-fomc-minutes",
       "date": "1981-02-24",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-03-31-fomc-minutes",
       "date": "1981-03-31",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-05-06-fomc-minutes",
       "date": "1981-05-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-05-18-fomc-minutes",
       "date": "1981-05-18",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.7120333333333333,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-07-07-fomc-minutes",
       "date": "1981-07-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.7906666666666666,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-08-07-fomc-minutes",
       "date": "1981-08-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-08-18-fomc-minutes",
       "date": "1981-08-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-10-06-fomc-minutes",
       "date": "1981-10-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-11-17-fomc-minutes",
       "date": "1981-11-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1981-12-22-fomc-minutes",
       "date": "1981-12-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.4476,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1982-02-02-fomc-minutes",
       "date": "1982-02-02",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3206,
+      "combined_score_rolling": 0.3804666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1982-03-30-fomc-minutes",
       "date": "1982-03-30",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2725,
+      "combined_score_rolling": 0.32339999999999997,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1982-05-18-fomc-minutes",
       "date": "1982-05-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2316,
+      "combined_score_rolling": 0.2749,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1982-07-01-fomc-minutes",
       "date": "1982-07-01",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1969,
+      "combined_score_rolling": 0.2336666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1982-07-15-fomc-minutes",
       "date": "1982-07-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1673,
+      "combined_score_rolling": 0.1986,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1982-08-24-fomc-minutes",
       "date": "1982-08-24",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": -0.21193333333333333,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
@@ -1572,7 +1572,7 @@
       "doc_id": "1982-10-05-fomc-minutes",
       "date": "1982-10-05",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.6109,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
@@ -1587,136 +1587,136 @@
     {
       "doc_id": "1982-12-21-fomc-minutes",
       "date": "1982-12-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.9500000000000001,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-02-09-fomc-minutes",
       "date": "1983-02-09",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-03-29-fomc-minutes",
       "date": "1983-03-29",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-05-24-fomc-minutes",
       "date": "1983-05-24",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-07-13-fomc-minutes",
       "date": "1983-07-13",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5266000000000001,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-08-23-fomc-minutes",
       "date": "1983-08-23",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.4476,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-10-04-fomc-minutes",
       "date": "1983-10-04",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.3804666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-11-15-fomc-minutes",
       "date": "1983-11-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2725,
+      "combined_score_rolling": -0.32339999999999997,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1983-12-20-fomc-minutes",
       "date": "1983-12-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2316,
+      "combined_score_rolling": -0.2749,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-01-31-fomc-minutes",
       "date": "1984-01-31",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1969,
+      "combined_score_rolling": -0.2336666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-03-27-fomc-minutes",
       "date": "1984-03-27",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1673,
+      "combined_score_rolling": -0.1986,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-05-22-fomc-minutes",
       "date": "1984-05-22",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.21193333333333333,
       "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-07-17-fomc-minutes",
       "date": "1984-07-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.5609000000000001,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-08-21-fomc-minutes",
       "date": "1984-08-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-10-02-fomc-minutes",
       "date": "1984-10-02",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-11-07-fomc-minutes",
       "date": "1984-11-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1984-12-18-fomc-minutes",
       "date": "1984-12-18",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": 0.0453666666666667,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
@@ -1724,103 +1724,103 @@
       "doc_id": "1985-02-13-fomc-minutes",
       "date": "1985-02-13",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.4926666666666666,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-03-26-fomc-minutes",
       "date": "1985-03-26",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.9499999999999998,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-05-21-fomc-minutes",
       "date": "1985-05-21",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.9499999999999998,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-07-10-fomc-minutes",
       "date": "1985-07-10",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.8999999999999999,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-08-20-fomc-minutes",
       "date": "1985-08-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-10-01-fomc-minutes",
       "date": "1985-10-01",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-11-05-fomc-minutes",
       "date": "1985-11-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1985-12-17-fomc-minutes",
       "date": "1985-12-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5265999999999998,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-02-12-fomc-minutes",
       "date": "1986-02-12",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.4476,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-04-01-fomc-minutes",
       "date": "1986-04-01",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.3804666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-05-20-fomc-minutes",
       "date": "1986-05-20",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": -0.5659,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-07-09-fomc-minutes",
       "date": "1986-07-09",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.7235333333333333,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-08-19-fomc-minutes",
       "date": "1986-08-19",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.9499999999999998,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
@@ -1828,279 +1828,279 @@
       "doc_id": "1986-09-23-fomc-minutes",
       "date": "1986-09-23",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.9499999999999998,
       "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-11-05-fomc-minutes",
       "date": "1986-11-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.6666666666666666,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.9499999999999998,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1986-12-16-fomc-minutes",
       "date": "1986-12-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1987-02-11-fomc-minutes",
       "date": "1987-02-11",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1987-03-31-fomc-minutes",
       "date": "1987-03-31",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1987-05-19-fomc-minutes",
       "date": "1987-05-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5265999999999998,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1987-07-07-fomc-minutes",
       "date": "1987-07-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.4476,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1987-08-18-fomc-minutes",
       "date": "1987-08-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.3804666666666667,
+      "combined_label": "dovish",
       "chair": "Paul Volcker"
     },
     {
       "doc_id": "1987-09-22-fomc-minutes",
       "date": "1987-09-22",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.10076666666666667,
       "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1987-11-03-fomc-minutes",
       "date": "1987-11-03",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.5097999999999999,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1987-12-16-fomc-minutes",
       "date": "1987-12-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-01-05-fomc-minutes",
       "date": "1988-01-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-02-10-fomc-minutes",
       "date": "1988-02-10",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-03-29-fomc-minutes",
       "date": "1988-03-29",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-05-17-fomc-minutes",
       "date": "1988-05-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.4476,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-06-30-fomc-minutes",
       "date": "1988-06-30",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3206,
+      "combined_score_rolling": 0.3804666666666667,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-08-16-fomc-minutes",
       "date": "1988-08-16",
       "combined_score": 1.0,
-      "combined_score_rolling": 0.3333333333333333,
+      "combined_score_rolling": 0.5659,
       "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-09-20-fomc-minutes",
       "date": "1988-09-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.85,
+      "combined_score_rolling": 0.7235333333333333,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-11-01-fomc-minutes",
       "date": "1988-11-01",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": 0.7225,
+      "combined_score_rolling": 0.8574999999999999,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1988-12-14-fomc-minutes",
       "date": "1988-12-14",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.6141,
+      "combined_score_rolling": 0.7288666666666667,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-02-08-fomc-minutes",
       "date": "1989-02-08",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.522,
+      "combined_score_rolling": 0.6195333333333334,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-03-28-fomc-minutes",
       "date": "1989-03-28",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.4437,
+      "combined_score_rolling": 0.5266000000000001,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-05-16-fomc-minutes",
       "date": "1989-05-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3771,
+      "combined_score_rolling": 0.4476,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-07-06-fomc-minutes",
       "date": "1989-07-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.3206,
+      "combined_score_rolling": 0.3804666666666667,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-08-22-fomc-minutes",
       "date": "1989-08-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2725,
+      "combined_score_rolling": 0.32339999999999997,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-10-03-fomc-minutes",
       "date": "1989-10-03",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.2316,
+      "combined_score_rolling": 0.2749,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-11-14-fomc-minutes",
       "date": "1989-11-14",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1969,
+      "combined_score_rolling": 0.2336666666666667,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1989-12-19-fomc-minutes",
       "date": "1989-12-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": 0.1673,
+      "combined_score_rolling": 0.1986,
+      "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-02-07-fomc-minutes",
       "date": "1990-02-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.1422,
+      "combined_score_rolling": 0.16879999999999998,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-03-27-fomc-minutes",
       "date": "1990-03-27",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.1209,
+      "combined_score_rolling": 0.14346666666666666,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-05-15-fomc-minutes",
       "date": "1990-05-15",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.1028,
+      "combined_score_rolling": 0.12196666666666667,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-07-03-fomc-minutes",
       "date": "1990-07-03",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0874,
+      "combined_score_rolling": 0.1037,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-08-21-fomc-minutes",
       "date": "1990-08-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0743,
+      "combined_score_rolling": 0.08816666666666667,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-10-02-fomc-minutes",
       "date": "1990-10-02",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0631,
+      "combined_score_rolling": 0.07493333333333334,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1990-11-13-fomc-minutes",
       "date": "1990-11-13",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score": 0.0536,
+      "combined_score_rolling": 0.06366666666666668,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2108,7 +2108,7 @@
       "doc_id": "1990-12-18-fomc-minutes",
       "date": "1990-12-18",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score_rolling": 0.0389,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2116,7 +2116,7 @@
       "doc_id": "1991-02-06-fomc-minutes",
       "date": "1991-02-06",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
+      "combined_score_rolling": 0.017866666666666666,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2139,176 +2139,176 @@
     {
       "doc_id": "1991-07-03-fomc-minutes",
       "date": "1991-07-03",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.6166666666666667,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1991-08-20-fomc-minutes",
       "date": "1991-08-20",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1991-10-01-fomc-minutes",
       "date": "1991-10-01",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": -0.8574999999999999,
       "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1991-11-05-fomc-minutes",
       "date": "1991-11-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1991-12-17-fomc-minutes",
       "date": "1991-12-17",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.6666666666666666,
+      "combined_score_rolling": -0.9499999999999998,
       "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-02-05-fomc-minutes",
       "date": "1992-02-05",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.8999999999999999,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-03-31-fomc-minutes",
       "date": "1992-03-31",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-05-19-fomc-minutes",
       "date": "1992-05-19",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-07-01-fomc-minutes",
       "date": "1992-07-01",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333334,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-08-18-fomc-minutes",
       "date": "1992-08-18",
       "combined_score": -1.0,
-      "combined_score_rolling": -0.3333333333333333,
+      "combined_score_rolling": -0.7120333333333333,
       "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-10-06-fomc-minutes",
       "date": "1992-10-06",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.85,
+      "combined_score_rolling": -0.7906666666666666,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-11-17-fomc-minutes",
       "date": "1992-11-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": -0.3333333333333333,
-      "combined_label": "neutral",
+      "combined_score": -0.7225,
+      "combined_score_rolling": -0.8574999999999999,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1992-12-22-fomc-minutes",
       "date": "1992-12-22",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.6141,
+      "combined_score_rolling": -0.7288666666666667,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-02-03-fomc-minutes",
       "date": "1993-02-03",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.522,
+      "combined_score_rolling": -0.6195333333333333,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-03-23-fomc-minutes",
       "date": "1993-03-23",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.4437,
+      "combined_score_rolling": -0.5266,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-05-18-fomc-minutes",
       "date": "1993-05-18",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3771,
+      "combined_score_rolling": -0.4476,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-07-07-fomc-minutes",
       "date": "1993-07-07",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.3206,
+      "combined_score_rolling": -0.3804666666666667,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-08-17-fomc-minutes",
       "date": "1993-08-17",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2725,
+      "combined_score_rolling": -0.32339999999999997,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-09-21-fomc-minutes",
       "date": "1993-09-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.2316,
+      "combined_score_rolling": -0.2749,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-11-16-fomc-minutes",
       "date": "1993-11-16",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1969,
+      "combined_score_rolling": -0.2336666666666666,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1993-12-21-fomc-minutes",
       "date": "1993-12-21",
-      "combined_score": 0.0,
-      "combined_score_rolling": 0.0,
-      "combined_label": "neutral",
+      "combined_score": -0.1673,
+      "combined_score_rolling": -0.19859999999999997,
+      "combined_label": "dovish",
       "chair": "Alan Greenspan"
     },
     {
       "doc_id": "1994-02-04-fomc-minutes",
       "date": "1994-02-04",
       "combined_score": -0.0278,
-      "combined_score_rolling": -0.009266666666666666,
+      "combined_score_rolling": -0.13066666666666663,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2316,7 +2316,7 @@
       "doc_id": "1994-03-22-fomc-minutes",
       "date": "1994-03-22",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.009266666666666666,
+      "combined_score_rolling": -0.06503333333333329,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2324,7 +2324,7 @@
       "doc_id": "1994-04-18-fomc-minutes",
       "date": "1994-04-18",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.009266666666666666,
+      "combined_score_rolling": -0.00926666666666663,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2332,7 +2332,7 @@
       "doc_id": "1994-05-17-fomc-minutes",
       "date": "1994-05-17",
       "combined_score": 0.0437,
-      "combined_score_rolling": 0.014566666666666667,
+      "combined_score_rolling": 0.014566666666666705,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2340,7 +2340,7 @@
       "doc_id": "1994-07-06-fomc-minutes",
       "date": "1994-07-06",
       "combined_score": 0.0379,
-      "combined_score_rolling": 0.027200000000000002,
+      "combined_score_rolling": 0.02720000000000004,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2348,7 +2348,7 @@
       "doc_id": "1994-08-16-fomc-minutes",
       "date": "1994-08-16",
       "combined_score": 0.0417,
-      "combined_score_rolling": 0.041100000000000005,
+      "combined_score_rolling": 0.04110000000000004,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2356,7 +2356,7 @@
       "doc_id": "1994-09-27-fomc-minutes",
       "date": "1994-09-27",
       "combined_score": 0.0201,
-      "combined_score_rolling": 0.03323333333333334,
+      "combined_score_rolling": 0.03323333333333337,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2364,7 +2364,7 @@
       "doc_id": "1994-11-15-fomc-minutes",
       "date": "1994-11-15",
       "combined_score": 0.0297,
-      "combined_score_rolling": 0.0305,
+      "combined_score_rolling": 0.030500000000000037,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2372,7 +2372,7 @@
       "doc_id": "1994-12-20-fomc-minutes",
       "date": "1994-12-20",
       "combined_score": 0.0268,
-      "combined_score_rolling": 0.025533333333333335,
+      "combined_score_rolling": 0.02553333333333337,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2380,7 +2380,7 @@
       "doc_id": "1995-02-01-fomc-minutes",
       "date": "1995-02-01",
       "combined_score": 0.059,
-      "combined_score_rolling": 0.0385,
+      "combined_score_rolling": 0.038500000000000034,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2388,7 +2388,7 @@
       "doc_id": "1995-03-28-fomc-minutes",
       "date": "1995-03-28",
       "combined_score": 0.0134,
-      "combined_score_rolling": 0.03306666666666667,
+      "combined_score_rolling": 0.0330666666666667,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2396,7 +2396,7 @@
       "doc_id": "1995-05-23-fomc-minutes",
       "date": "1995-05-23",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.02413333333333333,
+      "combined_score_rolling": 0.024133333333333368,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2404,7 +2404,7 @@
       "doc_id": "1995-07-06-fomc-minutes",
       "date": "1995-07-06",
       "combined_score": -0.0267,
-      "combined_score_rolling": -0.004433333333333333,
+      "combined_score_rolling": -0.004433333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2412,7 +2412,7 @@
       "doc_id": "1995-08-22-fomc-minutes",
       "date": "1995-08-22",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.0089,
+      "combined_score_rolling": -0.008899999999999963,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2420,7 +2420,7 @@
       "doc_id": "1995-09-26-fomc-minutes",
       "date": "1995-09-26",
       "combined_score": -0.052,
-      "combined_score_rolling": -0.02623333333333333,
+      "combined_score_rolling": -0.026233333333333293,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2428,7 +2428,7 @@
       "doc_id": "1995-11-15-fomc-minutes",
       "date": "1995-11-15",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.017333333333333333,
+      "combined_score_rolling": -0.017333333333333294,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2436,7 +2436,7 @@
       "doc_id": "1995-12-19-fomc-minutes",
       "date": "1995-12-19",
       "combined_score": -0.0231,
-      "combined_score_rolling": -0.025033333333333335,
+      "combined_score_rolling": -0.025033333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2444,7 +2444,7 @@
       "doc_id": "1996-01-30-fomc-minutes",
       "date": "1996-01-30",
       "combined_score": -0.0172,
-      "combined_score_rolling": -0.013433333333333334,
+      "combined_score_rolling": -0.013433333333333297,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2452,7 +2452,7 @@
       "doc_id": "1996-01-31-fomc-minutes",
       "date": "1996-01-31",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.013433333333333334,
+      "combined_score_rolling": -0.013433333333333297,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2460,7 +2460,7 @@
       "doc_id": "1996-03-26-fomc-minutes",
       "date": "1996-03-26",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.005733333333333333,
+      "combined_score_rolling": -0.005733333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2476,7 +2476,7 @@
       "doc_id": "1996-07-02-fomc-minutes",
       "date": "1996-07-02",
       "combined_score": 0.0398,
-      "combined_score_rolling": 0.013266666666666668,
+      "combined_score_rolling": 0.013266666666666704,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2484,7 +2484,7 @@
       "doc_id": "1996-08-20-fomc-minutes",
       "date": "1996-08-20",
       "combined_score": 0.0276,
-      "combined_score_rolling": 0.022466666666666666,
+      "combined_score_rolling": 0.022466666666666704,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2492,7 +2492,7 @@
       "doc_id": "1996-09-24-fomc-minutes",
       "date": "1996-09-24",
       "combined_score": 0.0125,
-      "combined_score_rolling": 0.026633333333333332,
+      "combined_score_rolling": 0.02663333333333337,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2500,7 +2500,7 @@
       "doc_id": "1996-11-13-fomc-minutes",
       "date": "1996-11-13",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.013366666666666666,
+      "combined_score_rolling": 0.013366666666666702,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2508,7 +2508,7 @@
       "doc_id": "1996-12-17-fomc-minutes",
       "date": "1996-12-17",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.004166666666666667,
+      "combined_score_rolling": 0.004166666666666704,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2524,7 +2524,7 @@
       "doc_id": "1997-03-25-fomc-minutes",
       "date": "1997-03-25",
       "combined_score": -0.0198,
-      "combined_score_rolling": -0.006600000000000001,
+      "combined_score_rolling": -0.0065999999999999635,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2532,7 +2532,7 @@
       "doc_id": "1997-05-20-fomc-minutes",
       "date": "1997-05-20",
       "combined_score": 0.0428,
-      "combined_score_rolling": 0.007666666666666665,
+      "combined_score_rolling": 0.007666666666666703,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2540,7 +2540,7 @@
       "doc_id": "1997-07-01-fomc-minutes",
       "date": "1997-07-01",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.007666666666666665,
+      "combined_score_rolling": 0.007666666666666703,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2548,7 +2548,7 @@
       "doc_id": "1997-08-19-fomc-minutes",
       "date": "1997-08-19",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.014266666666666665,
+      "combined_score_rolling": 0.014266666666666704,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2572,7 +2572,7 @@
       "doc_id": "1997-12-16-fomc-minutes",
       "date": "1997-12-16",
       "combined_score": -0.0159,
-      "combined_score_rolling": -0.0053,
+      "combined_score_rolling": -0.005299999999999964,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2580,7 +2580,7 @@
       "doc_id": "1998-02-03-fomc-minutes",
       "date": "1998-02-03",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.0053,
+      "combined_score_rolling": -0.005299999999999964,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2588,7 +2588,7 @@
       "doc_id": "1998-03-31-fomc-minutes",
       "date": "1998-03-31",
       "combined_score": 0.0139,
-      "combined_score_rolling": -0.0006666666666666673,
+      "combined_score_rolling": -0.0006666666666666302,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2596,7 +2596,7 @@
       "doc_id": "1998-05-19-fomc-minutes",
       "date": "1998-05-19",
       "combined_score": 0.0192,
-      "combined_score_rolling": 0.011033333333333332,
+      "combined_score_rolling": 0.011033333333333369,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2604,7 +2604,7 @@
       "doc_id": "1998-06-30-fomc-minutes",
       "date": "1998-06-30",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.011033333333333332,
+      "combined_score_rolling": 0.011033333333333369,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2612,7 +2612,7 @@
       "doc_id": "1998-08-18-fomc-minutes",
       "date": "1998-08-18",
       "combined_score": 0.0121,
-      "combined_score_rolling": 0.010433333333333331,
+      "combined_score_rolling": 0.010433333333333369,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2620,7 +2620,7 @@
       "doc_id": "1998-09-29-fomc-minutes",
       "date": "1998-09-29",
       "combined_score": -0.0277,
-      "combined_score_rolling": -0.0052,
+      "combined_score_rolling": -0.0051999999999999625,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2628,7 +2628,7 @@
       "doc_id": "1998-10-15-fomc-minutes",
       "date": "1998-10-15",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.0052,
+      "combined_score_rolling": -0.0051999999999999625,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2636,7 +2636,7 @@
       "doc_id": "1998-11-17-fomc-minutes",
       "date": "1998-11-17",
       "combined_score": -0.0107,
-      "combined_score_rolling": -0.012799999999999999,
+      "combined_score_rolling": -0.012799999999999962,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2644,7 +2644,7 @@
       "doc_id": "1998-12-22-fomc-minutes",
       "date": "1998-12-22",
       "combined_score": 0.0215,
-      "combined_score_rolling": 0.0036000000000000003,
+      "combined_score_rolling": 0.003600000000000037,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2652,7 +2652,7 @@
       "doc_id": "1999-02-02-fomc-minutes",
       "date": "1999-02-02",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.0036000000000000003,
+      "combined_score_rolling": 0.003600000000000037,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2660,7 +2660,7 @@
       "doc_id": "1999-03-30-fomc-minutes",
       "date": "1999-03-30",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.007166666666666666,
+      "combined_score_rolling": 0.007166666666666703,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2668,7 +2668,7 @@
       "doc_id": "1999-05-18-fomc-minutes",
       "date": "1999-05-18",
       "combined_score": -0.0158,
-      "combined_score_rolling": -0.005266666666666667,
+      "combined_score_rolling": -0.0052666666666666305,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2676,7 +2676,7 @@
       "doc_id": "1999-06-29-fomc-minutes",
       "date": "1999-06-29",
       "combined_score": 0.0436,
-      "combined_score_rolling": 0.009266666666666666,
+      "combined_score_rolling": 0.009266666666666703,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2684,7 +2684,7 @@
       "doc_id": "1999-06-30-fomc-minutes",
       "date": "1999-06-30",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.009266666666666666,
+      "combined_score_rolling": 0.009266666666666703,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2692,7 +2692,7 @@
       "doc_id": "1999-08-24-fomc-minutes",
       "date": "1999-08-24",
       "combined_score": 0.0206,
-      "combined_score_rolling": 0.021400000000000002,
+      "combined_score_rolling": 0.02140000000000004,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2700,7 +2700,7 @@
       "doc_id": "1999-10-05-fomc-minutes",
       "date": "1999-10-05",
       "combined_score": 0.0369,
-      "combined_score_rolling": 0.01916666666666667,
+      "combined_score_rolling": 0.019166666666666703,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2708,7 +2708,7 @@
       "doc_id": "1999-11-16-fomc-minutes",
       "date": "1999-11-16",
       "combined_score": 0.0219,
-      "combined_score_rolling": 0.026466666666666666,
+      "combined_score_rolling": 0.026466666666666704,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2716,7 +2716,7 @@
       "doc_id": "1999-12-21-fomc-minutes",
       "date": "1999-12-21",
       "combined_score": 0.022,
-      "combined_score_rolling": 0.026933333333333333,
+      "combined_score_rolling": 0.026933333333333368,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2724,7 +2724,7 @@
       "doc_id": "2000-02-02-fomc-minutes",
       "date": "2000-02-02",
       "combined_score": 0.0318,
-      "combined_score_rolling": 0.025233333333333333,
+      "combined_score_rolling": 0.02523333333333337,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2732,7 +2732,7 @@
       "doc_id": "2000-03-21-fomc-minutes",
       "date": "2000-03-21",
       "combined_score": 0.046,
-      "combined_score_rolling": 0.03326666666666667,
+      "combined_score_rolling": 0.0332666666666667,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2740,7 +2740,7 @@
       "doc_id": "2000-05-16-fomc-minutes",
       "date": "2000-05-16",
       "combined_score": 0.0251,
-      "combined_score_rolling": 0.034300000000000004,
+      "combined_score_rolling": 0.03430000000000004,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2748,7 +2748,7 @@
       "doc_id": "2000-06-28-fomc-minutes",
       "date": "2000-06-28",
       "combined_score": 0.0141,
-      "combined_score_rolling": 0.028399999999999998,
+      "combined_score_rolling": 0.028400000000000036,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2756,7 +2756,7 @@
       "doc_id": "2000-08-22-fomc-minutes",
       "date": "2000-08-22",
       "combined_score": 0.0487,
-      "combined_score_rolling": 0.029300000000000003,
+      "combined_score_rolling": 0.029300000000000038,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2764,7 +2764,7 @@
       "doc_id": "2000-10-03-fomc-minutes",
       "date": "2000-10-03",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.02093333333333333,
+      "combined_score_rolling": 0.02093333333333337,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2772,7 +2772,7 @@
       "doc_id": "2000-11-15-fomc-minutes",
       "date": "2000-11-15",
       "combined_score": 0.007,
-      "combined_score_rolling": 0.018566666666666665,
+      "combined_score_rolling": 0.018566666666666704,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2780,7 +2780,7 @@
       "doc_id": "2000-12-19-fomc-minutes",
       "date": "2000-12-19",
       "combined_score": 0.3727,
-      "combined_score_rolling": 0.12656666666666666,
+      "combined_score_rolling": 0.1265666666666667,
       "combined_label": "hawkish",
       "chair": "Alan Greenspan"
     },
@@ -2788,7 +2788,7 @@
       "doc_id": "2001-01-03-fomc-minutes",
       "date": "2001-01-03",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.12656666666666666,
+      "combined_score_rolling": 0.1265666666666667,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2796,7 +2796,7 @@
       "doc_id": "2001-01-31-fomc-minutes",
       "date": "2001-01-31",
       "combined_score": -0.0103,
-      "combined_score_rolling": 0.1208,
+      "combined_score_rolling": 0.12080000000000003,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2804,7 +2804,7 @@
       "doc_id": "2001-03-20-fomc-minutes",
       "date": "2001-03-20",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.0034333333333333334,
+      "combined_score_rolling": -0.0034333333333332965,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2812,7 +2812,7 @@
       "doc_id": "2001-04-18-fomc-minutes",
       "date": "2001-04-18",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.0034333333333333334,
+      "combined_score_rolling": -0.0034333333333332965,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2820,7 +2820,7 @@
       "doc_id": "2001-05-15-fomc-minutes",
       "date": "2001-05-15",
       "combined_score": -0.0144,
-      "combined_score_rolling": -0.0048,
+      "combined_score_rolling": -0.004799999999999963,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2828,7 +2828,7 @@
       "doc_id": "2001-06-27-fomc-minutes",
       "date": "2001-06-27",
       "combined_score": -0.0145,
-      "combined_score_rolling": -0.009633333333333334,
+      "combined_score_rolling": -0.009633333333333298,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2836,7 +2836,7 @@
       "doc_id": "2001-08-21-fomc-minutes",
       "date": "2001-08-21",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.009633333333333334,
+      "combined_score_rolling": -0.009633333333333298,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2844,7 +2844,7 @@
       "doc_id": "2001-09-17-fomc-minutes",
       "date": "2001-09-17",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.004833333333333334,
+      "combined_score_rolling": -0.004833333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2852,7 +2852,7 @@
       "doc_id": "2001-10-02-fomc-minutes",
       "date": "2001-10-02",
       "combined_score": -0.0535,
-      "combined_score_rolling": -0.017833333333333333,
+      "combined_score_rolling": -0.017833333333333295,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2860,7 +2860,7 @@
       "doc_id": "2001-11-06-fomc-minutes",
       "date": "2001-11-06",
       "combined_score": -0.0168,
-      "combined_score_rolling": -0.023433333333333334,
+      "combined_score_rolling": -0.023433333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2868,7 +2868,7 @@
       "doc_id": "2001-12-11-fomc-minutes",
       "date": "2001-12-11",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.023433333333333334,
+      "combined_score_rolling": -0.023433333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2876,7 +2876,7 @@
       "doc_id": "2002-01-30-fomc-minutes",
       "date": "2002-01-30",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.0056,
+      "combined_score_rolling": -0.005599999999999963,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2884,7 +2884,7 @@
       "doc_id": "2002-03-19-fomc-minutes",
       "date": "2002-03-19",
       "combined_score": -0.0403,
-      "combined_score_rolling": -0.013433333333333334,
+      "combined_score_rolling": -0.013433333333333297,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2892,7 +2892,7 @@
       "doc_id": "2002-05-07-fomc-minutes",
       "date": "2002-05-07",
       "combined_score": -0.0105,
-      "combined_score_rolling": -0.016933333333333335,
+      "combined_score_rolling": -0.016933333333333297,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2900,7 +2900,7 @@
       "doc_id": "2002-06-26-fomc-minutes",
       "date": "2002-06-26",
       "combined_score": -0.0602,
-      "combined_score_rolling": -0.037,
+      "combined_score_rolling": -0.036999999999999963,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2908,7 +2908,7 @@
       "doc_id": "2002-08-13-fomc-minutes",
       "date": "2002-08-13",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.023566666666666666,
+      "combined_score_rolling": -0.023566666666666628,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2916,7 +2916,7 @@
       "doc_id": "2002-09-24-fomc-minutes",
       "date": "2002-09-24",
       "combined_score": -0.0164,
-      "combined_score_rolling": -0.025533333333333335,
+      "combined_score_rolling": -0.025533333333333297,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2924,7 +2924,7 @@
       "doc_id": "2002-11-06-fomc-minutes",
       "date": "2002-11-06",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.005466666666666667,
+      "combined_score_rolling": -0.00546666666666663,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2932,7 +2932,7 @@
       "doc_id": "2002-12-10-fomc-minutes",
       "date": "2002-12-10",
       "combined_score": -0.101,
-      "combined_score_rolling": -0.03913333333333333,
+      "combined_score_rolling": -0.0391333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2940,7 +2940,7 @@
       "doc_id": "2003-01-29-fomc-minutes",
       "date": "2003-01-29",
       "combined_score": -0.0122,
-      "combined_score_rolling": -0.037733333333333334,
+      "combined_score_rolling": -0.0377333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2948,7 +2948,7 @@
       "doc_id": "2003-03-18-fomc-minutes",
       "date": "2003-03-18",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.037733333333333334,
+      "combined_score_rolling": -0.0377333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2956,7 +2956,7 @@
       "doc_id": "2003-05-06-fomc-minutes",
       "date": "2003-05-06",
       "combined_score": -0.0706,
-      "combined_score_rolling": -0.0276,
+      "combined_score_rolling": -0.02759999999999996,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2964,7 +2964,7 @@
       "doc_id": "2003-06-25-fomc-minutes",
       "date": "2003-06-25",
       "combined_score": -0.0696,
-      "combined_score_rolling": -0.04673333333333333,
+      "combined_score_rolling": -0.04673333333333329,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2972,7 +2972,7 @@
       "doc_id": "2003-08-12-fomc-minutes",
       "date": "2003-08-12",
       "combined_score": -0.0373,
-      "combined_score_rolling": -0.059166666666666666,
+      "combined_score_rolling": -0.059166666666666624,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2980,7 +2980,7 @@
       "doc_id": "2003-09-16-fomc-minutes",
       "date": "2003-09-16",
       "combined_score": -0.0183,
-      "combined_score_rolling": -0.04173333333333334,
+      "combined_score_rolling": -0.041733333333333296,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2988,7 +2988,7 @@
       "doc_id": "2003-10-28-fomc-minutes",
       "date": "2003-10-28",
       "combined_score": -0.0632,
-      "combined_score_rolling": -0.0396,
+      "combined_score_rolling": -0.03959999999999996,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -2996,7 +2996,7 @@
       "doc_id": "2003-12-09-fomc-minutes",
       "date": "2003-12-09",
       "combined_score": -0.0679,
-      "combined_score_rolling": -0.049800000000000004,
+      "combined_score_rolling": -0.04979999999999996,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3004,7 +3004,7 @@
       "doc_id": "2004-01-28-fomc-minutes",
       "date": "2004-01-28",
       "combined_score": -0.0405,
-      "combined_score_rolling": -0.0572,
+      "combined_score_rolling": -0.057199999999999966,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3012,7 +3012,7 @@
       "doc_id": "2004-03-16-fomc-minutes",
       "date": "2004-03-16",
       "combined_score": -0.1227,
-      "combined_score_rolling": -0.07703333333333334,
+      "combined_score_rolling": -0.0770333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3020,7 +3020,7 @@
       "doc_id": "2004-05-04-fomc-minutes",
       "date": "2004-05-04",
       "combined_score": -0.0247,
-      "combined_score_rolling": -0.06263333333333333,
+      "combined_score_rolling": -0.0626333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3028,7 +3028,7 @@
       "doc_id": "2004-06-30-fomc-minutes",
       "date": "2004-06-30",
       "combined_score": -0.0498,
-      "combined_score_rolling": -0.06573333333333334,
+      "combined_score_rolling": -0.0657333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3036,7 +3036,7 @@
       "doc_id": "2004-08-10-fomc-minutes",
       "date": "2004-08-10",
       "combined_score": -0.0853,
-      "combined_score_rolling": -0.053266666666666664,
+      "combined_score_rolling": -0.05326666666666663,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3044,7 +3044,7 @@
       "doc_id": "2004-09-21-fomc-minutes",
       "date": "2004-09-21",
       "combined_score": -0.0558,
-      "combined_score_rolling": -0.06363333333333333,
+      "combined_score_rolling": -0.0636333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3052,7 +3052,7 @@
       "doc_id": "2004-11-10-fomc-minutes",
       "date": "2004-11-10",
       "combined_score": -0.0581,
-      "combined_score_rolling": -0.0664,
+      "combined_score_rolling": -0.06639999999999996,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3060,7 +3060,7 @@
       "doc_id": "2004-12-14-fomc-minutes",
       "date": "2004-12-14",
       "combined_score": -0.0757,
-      "combined_score_rolling": -0.0632,
+      "combined_score_rolling": -0.06319999999999996,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3068,7 +3068,7 @@
       "doc_id": "2005-02-02-fomc-minutes",
       "date": "2005-02-02",
       "combined_score": -0.0399,
-      "combined_score_rolling": -0.05790000000000001,
+      "combined_score_rolling": -0.05789999999999997,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3076,7 +3076,7 @@
       "doc_id": "2005-03-22-fomc-minutes",
       "date": "2005-03-22",
       "combined_score": -0.0483,
-      "combined_score_rolling": -0.05463333333333334,
+      "combined_score_rolling": -0.054633333333333305,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3084,7 +3084,7 @@
       "doc_id": "2005-05-03-fomc-minutes",
       "date": "2005-05-03",
       "combined_score": -0.0545,
-      "combined_score_rolling": -0.047566666666666674,
+      "combined_score_rolling": -0.04756666666666664,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3092,7 +3092,7 @@
       "doc_id": "2005-06-30-fomc-minutes",
       "date": "2005-06-30",
       "combined_score": -0.0338,
-      "combined_score_rolling": -0.04553333333333334,
+      "combined_score_rolling": -0.04553333333333331,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3100,7 +3100,7 @@
       "doc_id": "2005-08-09-fomc-minutes",
       "date": "2005-08-09",
       "combined_score": -0.0095,
-      "combined_score_rolling": -0.032600000000000004,
+      "combined_score_rolling": -0.03259999999999997,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3108,7 +3108,7 @@
       "doc_id": "2005-09-20-fomc-minutes",
       "date": "2005-09-20",
       "combined_score": -0.0657,
-      "combined_score_rolling": -0.036333333333333336,
+      "combined_score_rolling": -0.0363333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3116,7 +3116,7 @@
       "doc_id": "2005-11-01-fomc-minutes",
       "date": "2005-11-01",
       "combined_score": -0.0167,
-      "combined_score_rolling": -0.030633333333333335,
+      "combined_score_rolling": -0.0306333333333333,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3124,7 +3124,7 @@
       "doc_id": "2005-12-13-fomc-minutes",
       "date": "2005-12-13",
       "combined_score": 0.0386,
-      "combined_score_rolling": -0.014600000000000002,
+      "combined_score_rolling": -0.014599999999999965,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3132,7 +3132,7 @@
       "doc_id": "2006-01-31-fomc-minutes",
       "date": "2006-01-31",
       "combined_score": 0.0122,
-      "combined_score_rolling": 0.011366666666666664,
+      "combined_score_rolling": 0.0113666666666667,
       "combined_label": "neutral",
       "chair": "Alan Greenspan"
     },
@@ -3140,7 +3140,7 @@
       "doc_id": "2006-03-28-fomc-minutes",
       "date": "2006-03-28",
       "combined_score": 0.0588,
-      "combined_score_rolling": 0.03653333333333333,
+      "combined_score_rolling": 0.03653333333333337,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3148,7 +3148,7 @@
       "doc_id": "2006-05-10-fomc-minutes",
       "date": "2006-05-10",
       "combined_score": 0.0713,
-      "combined_score_rolling": 0.04743333333333333,
+      "combined_score_rolling": 0.04743333333333336,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3156,7 +3156,7 @@
       "doc_id": "2006-06-29-fomc-minutes",
       "date": "2006-06-29",
       "combined_score": 0.0566,
-      "combined_score_rolling": 0.06223333333333333,
+      "combined_score_rolling": 0.06223333333333336,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3164,7 +3164,7 @@
       "doc_id": "2006-08-08-fomc-minutes",
       "date": "2006-08-08",
       "combined_score": 0.1173,
-      "combined_score_rolling": 0.08173333333333332,
+      "combined_score_rolling": 0.08173333333333337,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3172,7 +3172,7 @@
       "doc_id": "2006-09-20-fomc-minutes",
       "date": "2006-09-20",
       "combined_score": 0.1272,
-      "combined_score_rolling": 0.10036666666666667,
+      "combined_score_rolling": 0.10036666666666672,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3180,7 +3180,7 @@
       "doc_id": "2006-10-25-fomc-minutes",
       "date": "2006-10-25",
       "combined_score": 0.1019,
-      "combined_score_rolling": 0.11546666666666666,
+      "combined_score_rolling": 0.1154666666666667,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3188,7 +3188,7 @@
       "doc_id": "2006-12-12-fomc-minutes",
       "date": "2006-12-12",
       "combined_score": 0.1026,
-      "combined_score_rolling": 0.11056666666666666,
+      "combined_score_rolling": 0.1105666666666667,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3196,7 +3196,7 @@
       "doc_id": "2007-01-31-fomc-minutes",
       "date": "2007-01-31",
       "combined_score": 0.0365,
-      "combined_score_rolling": 0.08033333333333333,
+      "combined_score_rolling": 0.08033333333333337,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3204,7 +3204,7 @@
       "doc_id": "2007-03-21-fomc-minutes",
       "date": "2007-03-21",
       "combined_score": 0.0125,
-      "combined_score_rolling": 0.05053333333333334,
+      "combined_score_rolling": 0.050533333333333375,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3212,7 +3212,7 @@
       "doc_id": "2007-05-09-fomc-minutes",
       "date": "2007-05-09",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.016333333333333335,
+      "combined_score_rolling": 0.01633333333333337,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3220,7 +3220,7 @@
       "doc_id": "2007-06-18-fomc-minutes",
       "date": "2007-06-18",
       "combined_score": 0.0,
-      "combined_score_rolling": 0.004166666666666667,
+      "combined_score_rolling": 0.004166666666666704,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3228,7 +3228,7 @@
       "doc_id": "2007-06-28-fomc-minutes",
       "date": "2007-06-28",
       "combined_score": -0.011,
-      "combined_score_rolling": -0.0036666666666666666,
+      "combined_score_rolling": -0.0036666666666666293,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3236,7 +3236,7 @@
       "doc_id": "2007-08-07-fomc-minutes",
       "date": "2007-08-07",
       "combined_score": -0.1478,
-      "combined_score_rolling": -0.05293333333333333,
+      "combined_score_rolling": -0.0529333333333333,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -3244,7 +3244,7 @@
       "doc_id": "2007-08-10-fomc-minutes",
       "date": "2007-08-10",
       "combined_score": 0.0,
-      "combined_score_rolling": -0.05293333333333333,
+      "combined_score_rolling": -0.0529333333333333,
       "combined_label": "neutral",
       "chair": "Ben Bernanke"
     },
@@ -4321,5 +4321,5 @@
     }
   ],
   "window": 3,
-  "generated_at": "2026-07-14T02:56:32.182853+00:00"
+  "generated_at": "2026-07-14T19:16:17.412755+00:00"
 }
