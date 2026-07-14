@@ -11,7 +11,9 @@ export default function ScoreGauge({ score, label }: Props) {
     <div className="score-gauge">
       <div className={`score-gauge-label label-${label}`}>{label.toUpperCase()}</div>
       <div className="score-gauge-track">
+        <div className="score-gauge-tick" style={{ left: "25%" }} />
         <div className="score-gauge-midline" />
+        <div className="score-gauge-tick" style={{ left: "75%" }} />
         <div className="score-gauge-marker" style={{ left: `${pct}%` }} />
       </div>
       <div className="score-gauge-ends">

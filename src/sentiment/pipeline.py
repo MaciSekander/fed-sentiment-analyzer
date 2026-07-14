@@ -45,7 +45,7 @@ def analyze_document(
     model_name: str | None = None,
     model_weight: float = DEFAULT_MODEL_WEIGHT,
 ) -> DocumentScore:
-    lex = lexicon_score_text(text)
+    lex = lexicon_score_text(text, date=date)
 
     model_score = None
     model_label = None

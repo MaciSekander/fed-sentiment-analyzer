@@ -24,7 +24,7 @@ def rolling_trend(df: pd.DataFrame, window: int = 3) -> pd.DataFrame:
     return df
 
 
-def _with_gap_breaks(df: pd.DataFrame, threshold_days: int = 180) -> pd.DataFrame:
+def with_gap_breaks(df: pd.DataFrame, threshold_days: int = 180) -> pd.DataFrame:
     """Insert a NaN-scored row at the midpoint of any date gap wider than
     threshold_days, so the plotted line breaks instead of drawing a
     misleading straight line across a period with no source documents
@@ -56,7 +56,7 @@ def plot_trend(df: pd.DataFrame, out_path: Path, window: int = 3) -> Path:
     df = rolling_trend(df, window=window)
     has_dates = "date" in df.columns and df["date"].notna().any()
     if has_dates:
-        df = _with_gap_breaks(df)
+        df = with_gap_breaks(df)
     x = df["date"] if has_dates else range(len(df))
 
     fig, ax = plt.subplots(figsize=(12, 5))

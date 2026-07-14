@@ -36,6 +36,36 @@ export interface HealthResponse {
   model_load_error: string | null;
 }
 
+export interface HistoryPoint {
+  doc_id: string | null;
+  date: string | null;
+  combined_score: number | null;
+  combined_score_rolling: number | null;
+  combined_label: string | null;
+  chair: string | null;
+}
+
+export interface FedRegime {
+  chair: string;
+  start: string;
+  end: string | null;
+}
+
+export interface HistoryAnnotation {
+  type: string;
+  start: string | null;
+  end: string | null;
+  label: string;
+}
+
+export interface HistoryResponse {
+  points: HistoryPoint[];
+  regimes: FedRegime[];
+  annotations: HistoryAnnotation[];
+  window: number;
+  generated_at: string;
+}
+
 async function parseErrorBody(res: Response): Promise<string> {
   try {
     const body = await res.json();
@@ -61,6 +91,14 @@ export async function getHealth(): Promise<HealthResponse> {
   const res = await fetch("/api/health");
   if (!res.ok) {
     throw new Error(`Health check failed (${res.status})`);
+  }
+  return res.json();
+}
+
+export async function getHistory(): Promise<HistoryResponse> {
+  const res = await fetch("/api/history");
+  if (!res.ok) {
+    throw new Error(`History request failed (${res.status}): ${await parseErrorBody(res)}`);
   }
   return res.json();
 }

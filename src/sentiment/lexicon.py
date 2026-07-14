@@ -71,6 +71,44 @@ DOVISH_PHRASES: dict[str, float] = {
     "economic slack": 1.2,
 }
 
+# Pre-1994 FOMC minutes don't use modern phrasing ("target range",
+# "restrictive stance") at all -- see the module docstring in
+# src/analysis/history.py for how this repo surfaces that as a documented
+# limitation rather than silently mis-scoring. This classic-era list was
+# derived by grepping the actual 1967-1993 minutes archive in this repo for
+# recurring, unambiguous language rather than guessed from general
+# knowledge of the era. Two things stood out:
+#
+# 1. The era's boilerplate "somewhat greater/lesser reserve restraint"
+#    asymmetric-directive language almost always appears as a same-sentence
+#    contingency ("greater restraint IF X, lesser restraint IF Y"), so
+#    counting both sides just cancels out -- deliberately excluded here,
+#    it isn't a useful signal despite being common.
+# 2. Sentences reporting an actual discount-rate change use a small,
+#    consistent set of phrasings across decades (Martin through Greenspan)
+#    and are an unambiguous, discrete policy action -- this list targets
+#    those specifically. Most meetings didn't announce a rate change, so
+#    most classic-era documents will still legitimately score neutral (no
+#    hits) -- that's an honest "no action this meeting", not a gap.
+CLASSIC_ERA_CUTOFF = "1994-01-01"
+
+CLASSIC_HAWKISH_PHRASES: dict[str, float] = {
+    "discount rates were increased": 2.0,
+    "discount rates were raised": 2.0,
+    "discount rate was increased": 2.0,
+    "increase in the discount rate": 1.8,
+    "increase in Federal Reserve discount rates": 1.8,
+    "increases in Federal Reserve discount rates": 1.8,
+}
+
+CLASSIC_DOVISH_PHRASES: dict[str, float] = {
+    "discount rates were reduced": 2.0,
+    "discount rate was reduced": 2.0,
+    "reduction in the discount rate": 1.8,
+    "reduction in Federal Reserve discount rates": 1.8,
+    "reductions in Federal Reserve discount rates": 1.8,
+}
+
 HAWKISH_LABEL = "hawkish"
 DOVISH_LABEL = "dovish"
 NEUTRAL_LABEL = "neutral"
@@ -98,27 +136,24 @@ def _compile(phrases: dict[str, float]) -> list[tuple[re.Pattern, float]]:
 
 _HAWKISH_COMPILED = _compile(HAWKISH_PHRASES)
 _DOVISH_COMPILED = _compile(DOVISH_PHRASES)
+_CLASSIC_HAWKISH_COMPILED = _compile(CLASSIC_HAWKISH_PHRASES)
+_CLASSIC_DOVISH_COMPILED = _compile(CLASSIC_DOVISH_PHRASES)
 
 
-def score_text(text: str, threshold: float = DEFAULT_THRESHOLD) -> LexiconResult:
-    """Score a document's hawkish/dovish lean using the phrase lexicon."""
-    word_count = max(len(text.split()), 1)
-
-    hawkish_hits: dict[str, int] = {}
-    hawkish_weighted = 0.0
-    for pattern, weight in _HAWKISH_COMPILED:
+def _count_hits(text: str, compiled: list[tuple[re.Pattern, float]]) -> tuple[dict[str, int], float]:
+    hits: dict[str, int] = {}
+    weighted = 0.0
+    for pattern, weight in compiled:
         count = len(pattern.findall(text))
         if count:
-            hawkish_hits[pattern.pattern] = count
-            hawkish_weighted += count * weight
+            hits[pattern.pattern] = count
+            weighted += count * weight
+    return hits, weighted
 
-    dovish_hits: dict[str, int] = {}
-    dovish_weighted = 0.0
-    for pattern, weight in _DOVISH_COMPILED:
-        count = len(pattern.findall(text))
-        if count:
-            dovish_hits[pattern.pattern] = count
-            dovish_weighted += count * weight
+
+def _score_modern(text: str, word_count: int, threshold: float) -> LexiconResult:
+    hawkish_hits, hawkish_weighted = _count_hits(text, _HAWKISH_COMPILED)
+    dovish_hits, dovish_weighted = _count_hits(text, _DOVISH_COMPILED)
 
     total = hawkish_weighted + dovish_weighted
     if total == 0:
@@ -132,6 +167,35 @@ def score_text(text: str, threshold: float = DEFAULT_THRESHOLD) -> LexiconResult
     confidence = min(density / 2.0, 1.0)
     score *= confidence
 
+    return _build_result(score, hawkish_hits, dovish_hits, word_count, threshold)
+
+
+def _score_classic(text: str, word_count: int, threshold: float) -> LexiconResult:
+    hawkish_hits, hawkish_weighted = _count_hits(text, _CLASSIC_HAWKISH_COMPILED)
+    dovish_hits, dovish_weighted = _count_hits(text, _CLASSIC_DOVISH_COMPILED)
+
+    total = hawkish_weighted + dovish_weighted
+    if total == 0:
+        score = 0.0
+    else:
+        # Unlike modern tone-language phrases, a hit here is a discrete,
+        # unambiguous action (an announced discount-rate change) -- it
+        # isn't diluted by these documents running thousands of words
+        # regardless of whether a policy action happened, so this doesn't
+        # use the modern scorer's word-count density confidence. Instead,
+        # confidence comes from how one-sided the hits are: a document
+        # reporting only a hike (the overwhelmingly common case) scores
+        # near +-1; one that mentions both (e.g. reviewing prior history)
+        # scores more moderately.
+        imbalance = abs(hawkish_weighted - dovish_weighted) / total
+        score = ((hawkish_weighted - dovish_weighted) / total) * min(0.5 + imbalance, 1.0)
+
+    return _build_result(score, hawkish_hits, dovish_hits, word_count, threshold)
+
+
+def _build_result(
+    score: float, hawkish_hits: dict[str, int], dovish_hits: dict[str, int], word_count: int, threshold: float
+) -> LexiconResult:
     if score > threshold:
         label = HAWKISH_LABEL
     elif score < -threshold:
@@ -146,3 +210,25 @@ def score_text(text: str, threshold: float = DEFAULT_THRESHOLD) -> LexiconResult
         dovish_hits=dovish_hits,
         word_count=word_count,
     )
+
+
+def score_text(text: str, date: str | None = None, threshold: float = DEFAULT_THRESHOLD) -> LexiconResult:
+    """Score a document's hawkish/dovish lean using the phrase lexicon.
+
+    `date` (an ISO date string, e.g. from a document's filename) is
+    optional and defaults to the modern phrase list -- the live web
+    analyzer never has a real document date for arbitrary pasted text, so
+    its behavior is unchanged. Pass a pre-1994 date (batch-scoring the
+    historical archive, see src/sentiment/pipeline.py) to use the
+    classic-era discount-rate-based scorer instead.
+    """
+    word_count = max(len(text.split()), 1)
+    # Normalize whitespace before matching: these documents (especially the
+    # pre-1994 archive) are hard-wrapped at a fixed column, so a phrase can
+    # land with a newline where a space belongs -- e.g. "target\nrange"
+    # instead of "target range" -- which would otherwise silently fail to
+    # match even though the phrase is right there in the source text.
+    normalized = re.sub(r"\s+", " ", text)
+    if date is not None and date < CLASSIC_ERA_CUTOFF:
+        return _score_classic(normalized, word_count, threshold)
+    return _score_modern(normalized, word_count, threshold)

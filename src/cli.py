@@ -6,6 +6,7 @@
     python -m src.cli analyze --input-dir data/raw/minutes --out data/processed/minutes_scores.csv
     python -m src.cli analyze --input-dir data/raw/minutes --out data/processed/minutes_scores.csv --no-model
     python -m src.cli trend --input data/processed/minutes_scores.csv --plot data/processed/minutes_trend.png
+    python -m src.cli history --input data/processed/minutes_scores.csv --out backend/app/static/history.json
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 
+from src.analysis.history import build_history
 from src.analysis.trends import plot_trend, scores_to_dataframe
 from src.ingestion.local_archives import ingest_all
 from src.scraper.fed_speeches import scrape_speeches
@@ -72,6 +74,19 @@ def _cmd_trend(args: argparse.Namespace) -> None:
     print(f"Saved trend plot to {out}")
 
 
+def _cmd_history(args: argparse.Namespace) -> None:
+    import json
+
+    import pandas as pd
+
+    df = pd.read_csv(args.input, parse_dates=["date"])
+    payload = build_history(df, window=args.window, gap_threshold_days=args.gap_threshold_days)
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(payload, indent=2))
+    print(f"Wrote {len(payload['points'])} points, {len(payload['regimes'])} regimes to {out_path}")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fed-sentiment-analyzer")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -109,6 +124,15 @@ def build_parser() -> argparse.ArgumentParser:
     p_trend.add_argument("--plot", required=True, help="Output PNG path")
     p_trend.add_argument("--window", type=int, default=3, help="Rolling average window, in documents")
     p_trend.set_defaults(func=_cmd_trend)
+
+    p_history = subparsers.add_parser(
+        "history", help="Build the JSON payload served by GET /api/history from a scores CSV"
+    )
+    p_history.add_argument("--input", required=True, help="CSV produced by `analyze`")
+    p_history.add_argument("--out", required=True, help="Output JSON path, e.g. backend/app/static/history.json")
+    p_history.add_argument("--window", type=int, default=3, help="Rolling average window, in documents")
+    p_history.add_argument("--gap-threshold-days", type=int, default=180, help="Gap size that breaks the line/adds a gap annotation")
+    p_history.set_defaults(func=_cmd_history)
 
     return parser
 
