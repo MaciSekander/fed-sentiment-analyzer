@@ -11,6 +11,7 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  type MouseHandlerDataParam,
 } from "recharts";
 import type { HistoryResponse } from "../api";
 import { HISTORY_CHART_SYNC_ID, parseDateToTs as toTs } from "../lib/chartTime";
@@ -64,10 +65,15 @@ export default function Timeline({ history, domain, onSelectDocument }: Props) {
     [history.points],
   );
 
-  // Recharts' onClick event type varies across chart element types and
-  // isn't easily named from the outside -- read defensively instead.
-  function handleClick(state: unknown) {
-    const point = (state as { activePayload?: { payload: ChartPoint }[] } | null)?.activePayload?.[0]?.payload;
+  // Recharts v3 changed this event shape from v2 -- there's no
+  // `activePayload` on the chart-level click event anymore, only
+  // activeTooltipIndex (the array index into `data`, as string or number
+  // depending on chart type). Look the point up in chartData ourselves.
+  function handleClick(state: MouseHandlerDataParam) {
+    if (state.activeTooltipIndex === undefined || state.activeTooltipIndex === null) return;
+    const index = Number(state.activeTooltipIndex);
+    if (Number.isNaN(index)) return;
+    const point = chartData[index];
     if (point?.doc_id) {
       onSelectDocument?.(point.doc_id);
     }
