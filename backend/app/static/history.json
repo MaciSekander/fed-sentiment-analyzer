@@ -4263,6 +4263,214 @@
       "combined_score_rolling": 0.15706666666666666,
       "combined_label": "hawkish",
       "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2023-05-03-fomc-minutes",
+      "date": "2023-05-03",
+      "combined_score": 0.1887,
+      "combined_score_rolling": 0.17786666666666665,
+      "combined_label": "hawkish",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2023-06-14-fomc-minutes",
+      "date": "2023-06-14",
+      "combined_score": 0.0854,
+      "combined_score_rolling": 0.14983333333333332,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2023-07-26-fomc-minutes",
+      "date": "2023-07-26",
+      "combined_score": 0.169,
+      "combined_score_rolling": 0.14769999999999997,
+      "combined_label": "hawkish",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2023-09-20-fomc-minutes",
+      "date": "2023-09-20",
+      "combined_score": 0.126,
+      "combined_score_rolling": 0.1268,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2023-11-01-fomc-minutes",
+      "date": "2023-11-01",
+      "combined_score": 0.1194,
+      "combined_score_rolling": 0.1381333333333333,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2023-12-13-fomc-minutes",
+      "date": "2023-12-13",
+      "combined_score": 0.1759,
+      "combined_score_rolling": 0.1404333333333333,
+      "combined_label": "hawkish",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-01-31-fomc-minutes",
+      "date": "2024-01-31",
+      "combined_score": 0.0808,
+      "combined_score_rolling": 0.12536666666666665,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-03-20-fomc-minutes",
+      "date": "2024-03-20",
+      "combined_score": 0.063,
+      "combined_score_rolling": 0.10656666666666664,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-05-01-fomc-minutes",
+      "date": "2024-05-01",
+      "combined_score": 0.0509,
+      "combined_score_rolling": 0.06489999999999997,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-06-12-fomc-minutes",
+      "date": "2024-06-12",
+      "combined_score": 0.0327,
+      "combined_score_rolling": 0.04886666666666664,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-07-31-fomc-minutes",
+      "date": "2024-07-31",
+      "combined_score": 0.0119,
+      "combined_score_rolling": 0.031833333333333304,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-09-18-fomc-minutes",
+      "date": "2024-09-18",
+      "combined_score": -0.1376,
+      "combined_score_rolling": -0.031000000000000028,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-11-07-fomc-minutes",
+      "date": "2024-11-07",
+      "combined_score": -0.0747,
+      "combined_score_rolling": -0.06680000000000003,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2024-12-18-fomc-minutes",
+      "date": "2024-12-18",
+      "combined_score": -0.0407,
+      "combined_score_rolling": -0.08433333333333337,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-01-29-fomc-minutes",
+      "date": "2025-01-29",
+      "combined_score": -0.008,
+      "combined_score_rolling": -0.04113333333333336,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-03-19-fomc-minutes",
+      "date": "2025-03-19",
+      "combined_score": -0.0124,
+      "combined_score_rolling": -0.020366666666666696,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-05-07-fomc-minutes",
+      "date": "2025-05-07",
+      "combined_score": -0.0303,
+      "combined_score_rolling": -0.01690000000000003,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-06-18-fomc-minutes",
+      "date": "2025-06-18",
+      "combined_score": 0.027,
+      "combined_score_rolling": -0.0052333333333333615,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-07-30-fomc-minutes",
+      "date": "2025-07-30",
+      "combined_score": -0.0169,
+      "combined_score_rolling": -0.006733333333333362,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-09-17-fomc-minutes",
+      "date": "2025-09-17",
+      "combined_score": -0.2219,
+      "combined_score_rolling": -0.07060000000000002,
+      "combined_label": "dovish",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-10-29-fomc-minutes",
+      "date": "2025-10-29",
+      "combined_score": -0.1861,
+      "combined_score_rolling": -0.14163333333333336,
+      "combined_label": "dovish",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2025-12-10-fomc-minutes",
+      "date": "2025-12-10",
+      "combined_score": -0.2074,
+      "combined_score_rolling": -0.20513333333333336,
+      "combined_label": "dovish",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2026-01-28-fomc-minutes",
+      "date": "2026-01-28",
+      "combined_score": -0.138,
+      "combined_score_rolling": -0.1771666666666667,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2026-03-18-fomc-minutes",
+      "date": "2026-03-18",
+      "combined_score": -0.1279,
+      "combined_score_rolling": -0.1577666666666667,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2026-04-29-fomc-minutes",
+      "date": "2026-04-29",
+      "combined_score": -0.0728,
+      "combined_score_rolling": -0.11290000000000004,
+      "combined_label": "neutral",
+      "chair": "Jerome Powell"
+    },
+    {
+      "doc_id": "2026-06-17-fomc-minutes",
+      "date": "2026-06-17",
+      "combined_score": -0.0168,
+      "combined_score_rolling": -0.07250000000000004,
+      "combined_label": "neutral",
+      "chair": "Kevin Warsh"
     }
   ],
   "regimes": [
@@ -4322,14 +4530,14 @@
   ],
   "highlights": {
     "current": {
-      "doc_id": "2023-03-22-fomc-minutes",
-      "date": "2023-03-22",
-      "combined_score": 0.1754,
-      "combined_score_rolling": 0.15706666666666666,
-      "combined_label": "hawkish",
-      "chair": "Jerome Powell"
+      "doc_id": "2026-06-17-fomc-minutes",
+      "date": "2026-06-17",
+      "combined_score": -0.0168,
+      "combined_score_rolling": -0.07250000000000004,
+      "combined_label": "neutral",
+      "chair": "Kevin Warsh"
     },
-    "trailing_year_average": 0.17454999999999998,
+    "trailing_year_average": -0.10675555555555555,
     "hawkish_streak": {
       "length": 35,
       "start_date": "1977-09-20",
@@ -4397,13 +4605,18 @@
       },
       {
         "chair": "Jerome Powell",
-        "average_score": 0.0169,
-        "meeting_count": 41
+        "average_score": 0.0083,
+        "meeting_count": 66
       },
       {
         "chair": "Paul Volcker",
         "average_score": -0.0158,
         "meeting_count": 76
+      },
+      {
+        "chair": "Kevin Warsh",
+        "average_score": -0.0168,
+        "meeting_count": 1
       },
       {
         "chair": "Alan Greenspan",
@@ -4423,5 +4636,5 @@
     ]
   },
   "window": 3,
-  "generated_at": "2026-07-14T20:17:18.998397+00:00"
+  "generated_at": "2026-07-14T21:40:41.838456+00:00"
 }
