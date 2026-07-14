@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from backend.app.routers import analyze, history
+from backend.app.routers import analyze, documents, fedfunds, history
 
 app = FastAPI(
     title="Fed Sentiment Analyzer API",
@@ -23,6 +23,8 @@ app.add_middleware(
 
 app.include_router(analyze.router)
 app.include_router(history.router)
+app.include_router(documents.router)
+app.include_router(fedfunds.router)
 
 # In production (the Docker image built for deployment), the frontend is
 # pre-built to frontend/dist and served by this same process. In local dev,

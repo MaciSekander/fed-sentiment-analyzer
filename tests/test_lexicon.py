@@ -1,4 +1,4 @@
-from src.sentiment.lexicon import score_text
+from src.sentiment.lexicon import find_phrase_spans, score_text
 
 HAWKISH_EXAMPLE = """
 Members judged that it would be appropriate to continue raising the target
@@ -90,3 +90,40 @@ def test_date_on_or_after_cutoff_uses_modern_lexicon():
     result = score_text(CLASSIC_HAWKISH_EXAMPLE, date="1994-01-01")
     assert not result.hawkish_hits
     assert result.label == "neutral"
+
+
+def test_find_phrase_spans_offsets_match_original_text():
+    spans = find_phrase_spans(HAWKISH_EXAMPLE)
+    assert spans
+    for span in spans:
+        # Compare with whitespace collapsed -- a phrase can legitimately
+        # span a hard line-wrap in the source text (see the next test), so
+        # the sliced text may contain a newline where the phrase has a
+        # plain space.
+        matched = " ".join(HAWKISH_EXAMPLE[span.start : span.end].split())
+        assert matched.lower() == span.phrase.lower()
+        assert span.category == "hawkish"
+
+
+def test_find_phrase_spans_tolerates_a_hard_line_wrap():
+    text = "The Committee decided to raise the target\nrange for the federal funds rate."
+    spans = find_phrase_spans(text)
+    assert any(s.phrase == "raise the target range" for s in spans)
+    match = next(s for s in spans if s.phrase == "raise the target range")
+    assert text[match.start : match.end] == "raise the target\nrange"
+
+
+def test_find_phrase_spans_merges_overlapping_matches():
+    text = "The Committee cited downside risks to growth in several regions."
+    spans = find_phrase_spans(text)
+    # "downside risks" is a prefix of "downside risks to growth" -- only
+    # the longer match should survive, not both.
+    matching = [s for s in spans if "downside risks" in s.phrase]
+    assert len(matching) == 1
+    assert matching[0].phrase == "downside risks to growth"
+
+
+def test_find_phrase_spans_uses_classic_lexicon_before_cutoff():
+    text = "An increase in the discount rate was announced this week."
+    spans = find_phrase_spans(text, date="1979-09-18")
+    assert any(s.phrase == "increase in the discount rate" for s in spans)

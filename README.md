@@ -151,6 +151,27 @@ request path. Re-run it whenever `minutes_scores.csv` changes meaningfully
 (e.g. after adding a new archive or extending the date range) or when
 `src/analysis/fed_regimes.py`'s chair list needs a new entry.
 
+### 5. Build the document drill-down and Fed funds rate data (optional)
+
+```bash
+python -m src.cli documents --scores data/processed/minutes_scores.csv --out backend/app/static/documents/
+python -m src.cli fetch-fedfunds --out backend/app/static/fedfunds.json
+```
+
+`documents` writes one JSON file per meeting (`{doc_id}.json`, ~15-20MB
+total for the full archive) with the raw text plus character-offset spans
+for every matched lexicon phrase (`src/sentiment/lexicon.py`'s
+`find_phrase_spans()`) -- this is what powers clicking a point on the
+History chart to read the actual source document with the matched
+phrases highlighted, served by `GET /api/documents/{doc_id}`.
+
+`fetch-fedfunds` pulls the real historical effective Fed funds rate from
+FRED's public CSV export (no API key needed) and builds the payload served
+by `GET /api/fedfunds`, shown as its own small-multiples panel under the
+sentiment chart (never on the same axis -- different units/scale
+entirely). Like `history.json`, both are one-time local precomputes,
+committed as static files, not recomputed per request.
+
 ## Website (live text analyzer + history)
 
 A FastAPI backend + React frontend, two tabs:
@@ -161,16 +182,34 @@ A FastAPI backend + React frontend, two tabs:
   shown so you can see *why* it scored the way it did.
 - **History** -- the full 1967-2023 lexicon-scored minutes archive (533
   documents, continuously covered aside from one PDF-only meeting -- see
-  "Get historical data" above) as an interactive chart
-  (`frontend/src/components/Timeline.tsx`, via Recharts), annotated with
-  every Fed Chair's tenure (`src/analysis/fed_regimes.py`) and the
-  pre-1994 classic-era low-signal period, plus a plain always-visible
-  legend (`RegimeLegend.tsx`) with the same information for anyone not
-  hovering the chart. Deliberately scored with the lexicon
-  baseline, not the transformer -- scoring all ~480 documents sentence-by-
-  sentence on CPU would take a very long time, and the README's own
-  "Usage" section above already documents the lexicon-only signal as a
-  meaningful, validated result over the full archive on its own.
+  "Get historical data" above), presented as:
+  - An opening summary line (`frontend/src/lib/narrative.ts`'s
+    `buildLede()`) stating the current stance, how it compares to the
+    trailing year, and the sitting chair -- deterministic string
+    templating off the same precomputed stats as the tiles below, not
+    generated text.
+  - An interactive sentiment chart (`Timeline.tsx`, via Recharts)
+    annotated with every Fed Chair's tenure (`src/analysis/fed_regimes.py`)
+    and the pre-1994 classic-era low-signal period, stacked with a small
+    Fed funds rate panel (`FedFundsChart.tsx`) sharing the same time axis
+    with a synced hover crosshair.
+  - **Click any point on the chart** to expand the actual source document
+    below it (`DocumentDrilldown.tsx`), with every matched lexicon phrase
+    highlighted in place.
+  - A highlights dashboard (`HighlightsDashboard.tsx`): current stance,
+    trailing-year comparison, longest hawkish/dovish streaks, most
+    extreme meetings on record, and the sharpest single-meeting reversal
+    -- all computed server-side in `src/analysis/history.py`'s
+    `_build_highlights()`, not in the browser.
+  - A plain always-visible legend (`RegimeLegend.tsx`, extended with an
+    average-score-by-chair column) with the same chair/annotation
+    information as the chart bands, for anyone not hovering it.
+
+  The chart itself is deliberately scored with the lexicon baseline, not
+  the transformer -- scoring the full archive sentence-by-sentence on CPU
+  would take a very long time, and the README's own "Usage" section above
+  already documents the lexicon-only signal as a meaningful, validated
+  result on its own.
 
 ```bash
 # Terminal 1 -- backend (needs the root requirements.txt + backend/requirements.txt)
@@ -192,15 +231,23 @@ back to lexicon-only scoring in that case rather than failing outright.
 
 ```
 backend/
-  app/main.py             # FastAPI app + CORS
-  app/routers/analyze.py  # POST /api/analyze, GET /api/health
-  app/routers/history.py  # GET /api/history (serves app/static/history.json)
-  app/schemas.py          # request/response models
-  app/static/history.json # precomputed by `src/cli.py history` -- see above
+  app/main.py               # FastAPI app + CORS
+  app/routers/analyze.py    # POST /api/analyze, GET /api/health
+  app/routers/history.py    # GET /api/history (serves app/static/history.json)
+  app/routers/documents.py  # GET /api/documents/{doc_id} (serves app/static/documents/*.json)
+  app/routers/fedfunds.py   # GET /api/fedfunds (serves app/static/fedfunds.json)
+  app/schemas.py            # request/response models
+  app/static/history.json   # precomputed by `src/cli.py history` -- see above
+  app/static/documents/     # precomputed by `src/cli.py documents` -- see above
+  app/static/fedfunds.json  # precomputed by `src/cli.py fetch-fedfunds` -- see above
 frontend/
-  src/App.tsx             # tabs (Analyze / History), textarea + example buttons + results
-  src/components/         # ScoreGauge, SentenceBreakdown, LexiconHits, Timeline, RegimeLegend
-  src/api.ts              # fetch wrappers
+  src/App.tsx              # tabs (Analyze / History), textarea + example buttons + results
+  src/components/          # ScoreGauge, SentenceBreakdown, LexiconHits (Analyze);
+                           # HistoryView, Timeline, FedFundsChart, DocumentDrilldown,
+                           # HighlightsDashboard, RegimeLegend (History)
+  src/lib/chartTime.ts     # shared x-axis domain/sync helpers for the two History charts
+  src/lib/narrative.ts     # deterministic lede text off the highlights payload
+  src/api.ts               # fetch wrappers
 ```
 
 `DISABLE_MODEL=1` (set on the Render free-tier deploy, see below) only
@@ -290,18 +337,23 @@ on `$PORT`, so no port configuration is needed either.
 ```
 src/
   ingestion/     # local_archives.py -- reassembles data/archives/*.zip into per-date .txt
+                 # fed_funds.py -- fetches the historical Fed funds rate from FRED
   scraper/       # fomc_minutes.py, fed_speeches.py, utils.py
-  sentiment/     # lexicon.py (baseline), model.py (transformer), pipeline.py (combines both)
+  sentiment/     # lexicon.py (baseline + find_phrase_spans() for highlighting),
+                 # model.py (transformer), pipeline.py (combines both)
   analysis/      # trends.py (rolling average + plotting, gap-aware line breaks)
                  # fed_regimes.py (Fed Chair tenure dates)
-                 # history.py (builds the /api/history JSON payload)
-  cli.py         # ingest-local / scrape-minutes / scrape-speeches / analyze / trend / history
+                 # history.py (builds the /api/history JSON payload + highlights)
+                 # documents.py (builds per-document drill-down JSON)
+  cli.py         # ingest-local / scrape-minutes / scrape-speeches / analyze / trend /
+                 # history / documents / fetch-fedfunds
 backend/         # FastAPI app serving the live analyzer + history (see Website section)
 frontend/        # React + Vite UI -- Analyze and History tabs
 Dockerfile       # single-container build for deployment (see Deployment section)
 deploy/          # space_README.md -- HF Spaces config header, copied in at deploy time
 .github/workflows/deploy-space.yml  # auto-deploy to HF Spaces on push to main
-tests/           # pytest suite for the lexicon, pipeline, model, ingestion, and history builder
+tests/           # pytest suite for the lexicon, pipeline, model, ingestion, history,
+                 # documents, and fed funds builders
 data/archives/   # pre-collected source zips (committed -- this is the primary data source)
 data/raw/        # ingested/scraped/manually-added per-document .txt (gitignored, regenerable)
 data/processed/  # scored CSVs and trend plots (gitignored)
@@ -374,3 +426,12 @@ model can't be reached.
 - The scraper is best-effort against a real, evolving government website;
   treat scrape failures as "check the selectors," not "the tool is
   broken."
+- `backend/app/static/documents/` and `fedfunds.json` are precomputed
+  snapshots, like `history.json` -- re-run `src/cli.py documents` /
+  `fetch-fedfunds` and recommit when the underlying archive or the Fed
+  funds rate meaningfully changes; the website doesn't fetch either live.
+- The Fed funds rate chart and the sentiment chart are two separate panels
+  (small multiples) by design, not one dual-axis chart -- they're
+  different units (percent vs. a -1..1 score) and overlaying them on one
+  axis would misstate the relationship between the two rather than just
+  let the reader compare their shapes over time.

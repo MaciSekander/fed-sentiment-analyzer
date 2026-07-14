@@ -13,7 +13,10 @@
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 * {
@@ -27,9 +30,13 @@ body {
 }
 
 .app {
-  max-width: 1100px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
+}
+
+.prose {
+  max-width: 68ch;
 }
 
 .app-header {
@@ -50,7 +57,8 @@ body {
 
 .app-header h1 {
   margin: 0 0 0.35rem;
-  font-size: 1.9rem;
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -336,10 +344,50 @@ textarea {
 }
 
 .history-section {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.lede {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0 0 var(--space-5);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.chart-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.drilldown {
+  margin-bottom: var(--space-5);
+}
+
+.chart-caption {
+  margin: 0 0 -0.5rem;
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 .timeline {
+  width: 100%;
+}
+
+.chart-clickable {
+  cursor: pointer;
+}
+
+.fedfunds-chart {
   width: 100%;
 }
 
@@ -356,6 +404,112 @@ textarea {
   font-variant-numeric: tabular-nums;
   color: var(--text);
   font-weight: 600;
+}
+
+.timeline-tooltip-hint {
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.drilldown {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+}
+
+.drilldown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.drilldown-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+}
+
+.drilldown-close:hover {
+  color: var(--text);
+}
+
+.drilldown-text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 60vh;
+  overflow-y: auto;
+  margin: 0.8rem 0;
+}
+
+mark.highlight-hawkish {
+  background: color-mix(in srgb, var(--hawkish) 30%, transparent);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 0 0.1rem;
+}
+
+mark.highlight-dovish {
+  background: color-mix(in srgb, var(--dovish) 30%, transparent);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 0 0.1rem;
+}
+
+.highlights-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stat-tile {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+
+.stat-tile-hero {
+  padding: 1.5rem 1.6rem;
+}
+
+.stat-tile-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+
+.stat-tile-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-variant-numeric: proportional-nums;
+}
+
+.stat-tile-hero-value {
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+}
+
+.stat-tile-sub {
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+}
+
+.stat-tile-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-2);
 }
 
 .regime-legend {
@@ -391,6 +545,18 @@ textarea {
   padding-bottom: 0.3rem;
 }
 
+.regime-legend-numbers {
+  display: flex;
+  gap: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.regime-legend-score {
+  min-width: 5.5rem;
+  text-align: right;
+}
+
 @media (max-width: 700px) {
   .regime-legend {
     grid-template-columns: 1fr;
@@ -399,5 +565,21 @@ textarea {
   .app-header {
     margin: 0 -1rem var(--space-3);
     padding: var(--space-2) 1rem;
+  }
+
+  .stat-tile-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-tile-hero-value {
+    font-size: 2.2rem;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+  }
+
+  .section-heading {
+    margin-top: var(--space-4);
   }
 }

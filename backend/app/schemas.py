@@ -68,9 +68,82 @@ class HistoryAnnotation(BaseModel):
     label: str
 
 
+class HighlightMeeting(BaseModel):
+    doc_id: str | None
+    date: str
+    combined_score: float
+    combined_score_rolling: float | None
+    combined_label: str
+    chair: str | None
+
+
+class StreakHighlight(BaseModel):
+    length: int
+    start_date: str
+    end_date: str
+    chair: str | None
+    end_chair: str | None
+
+
+class ReversalHighlight(BaseModel):
+    delta: float
+    before: HighlightMeeting
+    after: HighlightMeeting
+
+
+class ChairStance(BaseModel):
+    chair: str | None
+    average_score: float
+    meeting_count: int
+
+
+class HistoryHighlights(BaseModel):
+    current: HighlightMeeting
+    trailing_year_average: float | None
+    hawkish_streak: StreakHighlight | None
+    dovish_streak: StreakHighlight | None
+    most_hawkish: HighlightMeeting | None
+    most_dovish: HighlightMeeting | None
+    sharpest_reversal: ReversalHighlight | None
+    by_chair: list[ChairStance]
+
+
 class HistoryResponse(BaseModel):
     points: list[HistoryPoint]
     regimes: list[FedRegime]
     annotations: list[HistoryAnnotation]
+    highlights: HistoryHighlights
     window: int
+    generated_at: str
+
+
+class PhraseMatchOut(BaseModel):
+    phrase: str
+    category: str
+    start: int
+    end: int
+    weight: float
+
+
+class DocumentDetailResponse(BaseModel):
+    doc_id: str
+    date: str | None
+    chair: str | None
+    combined_score: float
+    combined_label: str
+    lexicon_score: float
+    word_count: int
+    text: str
+    matches: list[PhraseMatchOut]
+
+
+class FedFundsPoint(BaseModel):
+    date: str
+    rate: float
+
+
+class FedFundsResponse(BaseModel):
+    points: list[FedFundsPoint]
+    series_id: str
+    source: str
     generated_at: str

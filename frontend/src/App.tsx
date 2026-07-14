@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { analyzeText, getHealth, getHistory, type AnalyzeResponse, type HealthResponse, type HistoryResponse } from "./api";
+import { analyzeText, getHealth, type AnalyzeResponse, type HealthResponse } from "./api";
 import ScoreGauge from "./components/ScoreGauge";
 import SentenceBreakdown from "./components/SentenceBreakdown";
 import LexiconHits from "./components/LexiconHits";
-import Timeline from "./components/Timeline";
-import RegimeLegend from "./components/RegimeLegend";
+import HistoryView from "./components/HistoryView";
 
 const EXAMPLES: Record<string, string> = {
   Hawkish:
@@ -25,16 +24,10 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [health, setHealth] = useState<HealthResponse | null>(null);
 
-  const [history, setHistory] = useState<HistoryResponse | null>(null);
-  const [historyError, setHistoryError] = useState<string | null>(null);
-
   useEffect(() => {
     getHealth()
       .then(setHealth)
       .catch(() => setHealth(null));
-    getHistory()
-      .then(setHistory)
-      .catch((err) => setHistoryError(err instanceof Error ? err.message : String(err)));
   }, []);
 
   async function handleAnalyze() {
@@ -150,25 +143,7 @@ export default function App() {
         </>
       )}
 
-      {tab === "history" && (
-        <section className="history-section">
-          {historyError && <p className="error">Couldn't load history: {historyError}</p>}
-          {!history && !historyError && <p className="muted">Loading historical data&hellip;</p>}
-          {history && (
-            <>
-              <p className="subtitle">
-                Lexicon-scored FOMC minutes, {history.points[0]?.date?.slice(0, 4)}&ndash;
-                {history.points[history.points.length - 1]?.date?.slice(0, 4)}, a {history.window}-document rolling
-                average, annotated with each Fed Chair's tenure.
-              </p>
-              <div className="card">
-                <Timeline history={history} />
-              </div>
-              <RegimeLegend regimes={history.regimes} annotations={history.annotations} />
-            </>
-          )}
-        </section>
-      )}
+      {tab === "history" && <HistoryView />}
     </div>
   );
 }

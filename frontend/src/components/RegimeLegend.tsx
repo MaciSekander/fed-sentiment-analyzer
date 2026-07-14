@@ -1,8 +1,9 @@
-import type { FedRegime, HistoryAnnotation } from "../api";
+import type { ChairStance, FedRegime, HistoryAnnotation } from "../api";
 
 interface Props {
   regimes: FedRegime[];
   annotations: HistoryAnnotation[];
+  byChair: ChairStance[];
 }
 
 function formatRange(start: string | null, end: string | null): string {
@@ -15,18 +16,36 @@ function formatRange(start: string | null, end: string | null): string {
 // the chart's hover tooltip isn't reliably keyboard/screen-reader navigable,
 // so every value shown as a band on the chart is also reachable here without
 // hovering anything.
-export default function RegimeLegend({ regimes, annotations }: Props) {
+export default function RegimeLegend({ regimes, annotations, byChair }: Props) {
+  const stanceByChair = new Map(byChair.map((c) => [c.chair, c]));
+
   return (
     <div className="regime-legend">
       <div className="regime-legend-col">
         <h4>Fed Chair eras</h4>
         <ul>
-          {regimes.map((r) => (
-            <li key={r.chair}>
-              <span>{r.chair}</span>
-              <span className="muted">{formatRange(r.start, r.end)}</span>
-            </li>
-          ))}
+          {regimes.map((r) => {
+            const stance = stanceByChair.get(r.chair);
+            return (
+              <li key={r.chair}>
+                <span>{r.chair}</span>
+                <span className="regime-legend-numbers">
+                  <span className="muted">{formatRange(r.start, r.end)}</span>
+                  {stance && (
+                    <span
+                      className={`regime-legend-score ${
+                        stance.average_score > 0 ? "label-hawkish" : stance.average_score < 0 ? "label-dovish" : "label-neutral"
+                      }`}
+                      title={`${stance.meeting_count} meetings`}
+                    >
+                      avg {stance.average_score >= 0 ? "+" : ""}
+                      {stance.average_score.toFixed(3)}
+                    </span>
+                  )}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="regime-legend-col">

@@ -103,3 +103,71 @@ def test_classic_era_decay_does_not_apply_after_the_cutoff():
     )
     scores = [p["combined_score"] for p in build_history(df)["points"]]
     assert scores == [0.3, 0.0]
+
+
+def _highlights_df():
+    # Modern-era (post-1994) dates only, so the classic-era decay path
+    # never touches these -- keeps the numbers predictable for assertions.
+    return _df(
+        [
+            {"date": "2020-01-01", "combined_score": 0.05},  # neutral
+            {"date": "2020-02-01", "combined_score": 0.3},  # hawkish (streak start)
+            {"date": "2020-03-01", "combined_score": 0.35},  # hawkish
+            {"date": "2020-04-01", "combined_score": -0.6},  # dovish -- sharpest reversal from 0.35
+            {"date": "2020-05-01", "combined_score": -0.4},  # dovish
+            {"date": "2020-06-01", "combined_score": -0.5},  # dovish
+            {"date": "2020-07-01", "combined_score": 0.02},  # neutral (current)
+        ]
+    )
+
+
+def test_highlights_present_in_build_history_output():
+    payload = build_history(_highlights_df(), window=1)
+    assert "highlights" in payload
+    h = payload["highlights"]
+    assert h["current"]["date"] == "2020-07-01"
+    assert h["current"]["combined_label"] == "neutral"
+
+
+def test_highlights_streaks_and_extremes():
+    h = build_history(_highlights_df(), window=1)["highlights"]
+    assert h["hawkish_streak"] == {
+        "length": 2,
+        "start_date": "2020-02-01",
+        "end_date": "2020-03-01",
+        "chair": "Jerome Powell",
+        "end_chair": "Jerome Powell",
+    }
+    assert h["dovish_streak"]["length"] == 3
+    assert h["dovish_streak"]["start_date"] == "2020-04-01"
+    assert h["most_hawkish"]["date"] == "2020-03-01"
+    assert h["most_dovish"]["date"] == "2020-04-01"
+
+
+def test_highlights_sharpest_reversal():
+    h = build_history(_highlights_df(), window=1)["highlights"]
+    assert h["sharpest_reversal"]["before"]["date"] == "2020-03-01"
+    assert h["sharpest_reversal"]["after"]["date"] == "2020-04-01"
+    assert h["sharpest_reversal"]["delta"] == 0.95
+
+
+def test_highlights_by_chair_grouping():
+    h = build_history(_highlights_df(), window=1)["highlights"]
+    chairs = {c["chair"] for c in h["by_chair"]}
+    assert chairs == {"Jerome Powell"}
+    assert h["by_chair"][0]["meeting_count"] == 7
+
+
+def test_highlights_ignore_synthetic_gap_break_rows():
+    df = _df(
+        [
+            {"date": "2007-01-01", "combined_score": -0.2},
+            {"date": "2016-01-01", "combined_score": 0.3},
+        ]
+    )
+    # This gap inserts a synthetic NaN-scored row -- must not appear in any
+    # highlight (streak/extreme/reversal), and must not crash the math.
+    h = build_history(df, gap_threshold_days=180)["highlights"]
+    assert h["most_hawkish"]["combined_score"] is not None
+    assert h["most_dovish"]["combined_score"] is not None
+    assert h["current"]["date"] == "2016-01-01"

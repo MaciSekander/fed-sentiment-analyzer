@@ -4320,6 +4320,108 @@
       "label": "Classic-era lexicon: sparser signal, driven by discount-rate change announcements rather than continuous tone language"
     }
   ],
+  "highlights": {
+    "current": {
+      "doc_id": "2023-03-22-fomc-minutes",
+      "date": "2023-03-22",
+      "combined_score": 0.1754,
+      "combined_score_rolling": 0.15706666666666666,
+      "combined_label": "hawkish",
+      "chair": "Jerome Powell"
+    },
+    "trailing_year_average": 0.17454999999999998,
+    "hawkish_streak": {
+      "length": 35,
+      "start_date": "1977-09-20",
+      "end_date": "1980-05-20",
+      "chair": "Arthur Burns",
+      "end_chair": "Paul Volcker"
+    },
+    "dovish_streak": {
+      "length": 25,
+      "start_date": "1974-12-17",
+      "end_date": "1976-11-16",
+      "chair": "Arthur Burns",
+      "end_chair": "Arthur Burns"
+    },
+    "most_hawkish": {
+      "doc_id": "1978-11-21-fomc-minutes",
+      "date": "1978-11-21",
+      "combined_score": 1.0,
+      "combined_score_rolling": 1.0,
+      "combined_label": "hawkish",
+      "chair": "G. William Miller"
+    },
+    "most_dovish": {
+      "doc_id": "1971-01-12-fomc-minutes",
+      "date": "1971-01-12",
+      "combined_score": -1.0,
+      "combined_score_rolling": -1.0,
+      "combined_label": "dovish",
+      "chair": "Arthur Burns"
+    },
+    "sharpest_reversal": {
+      "delta": 1.7225,
+      "before": {
+        "doc_id": "1980-09-16-fomc-minutes",
+        "date": "1980-09-16",
+        "combined_score": -0.7225,
+        "combined_score_rolling": -0.8574999999999999,
+        "combined_label": "dovish",
+        "chair": "Paul Volcker"
+      },
+      "after": {
+        "doc_id": "1980-10-21-fomc-minutes",
+        "date": "1980-10-21",
+        "combined_score": 1.0,
+        "combined_score_rolling": -0.19083333333333333,
+        "combined_label": "hawkish",
+        "chair": "Paul Volcker"
+      }
+    },
+    "by_chair": [
+      {
+        "chair": "G. William Miller",
+        "average_score": 0.7145,
+        "meeting_count": 19
+      },
+      {
+        "chair": "William McChesney Martin Jr.",
+        "average_score": 0.3209,
+        "meeting_count": 39
+      },
+      {
+        "chair": "Janet Yellen",
+        "average_score": 0.0201,
+        "meeting_count": 32
+      },
+      {
+        "chair": "Jerome Powell",
+        "average_score": 0.0169,
+        "meeting_count": 41
+      },
+      {
+        "chair": "Paul Volcker",
+        "average_score": -0.0158,
+        "meeting_count": 76
+      },
+      {
+        "chair": "Alan Greenspan",
+        "average_score": -0.0201,
+        "meeting_count": 156
+      },
+      {
+        "chair": "Arthur Burns",
+        "average_score": -0.0501,
+        "meeting_count": 102
+      },
+      {
+        "chair": "Ben Bernanke",
+        "average_score": -0.0906,
+        "meeting_count": 68
+      }
+    ]
+  },
   "window": 3,
-  "generated_at": "2026-07-14T19:16:17.412755+00:00"
+  "generated_at": "2026-07-14T20:17:18.998397+00:00"
 }

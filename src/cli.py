@@ -7,6 +7,8 @@
     python -m src.cli analyze --input-dir data/raw/minutes --out data/processed/minutes_scores.csv --no-model
     python -m src.cli trend --input data/processed/minutes_scores.csv --plot data/processed/minutes_trend.png
     python -m src.cli history --input data/processed/minutes_scores.csv --out backend/app/static/history.json
+    python -m src.cli documents --scores data/processed/minutes_scores.csv --out backend/app/static/documents/
+    python -m src.cli fetch-fedfunds --out backend/app/static/fedfunds.json
 """
 
 from __future__ import annotations
@@ -15,8 +17,10 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 
+from src.analysis.documents import build_all_document_details
 from src.analysis.history import build_history
 from src.analysis.trends import plot_trend, scores_to_dataframe
+from src.ingestion.fed_funds import build_fedfunds_payload, fetch_fedfunds
 from src.ingestion.local_archives import ingest_all
 from src.scraper.fed_speeches import scrape_speeches
 from src.scraper.fomc_minutes import scrape_minutes
@@ -87,6 +91,28 @@ def _cmd_history(args: argparse.Namespace) -> None:
     print(f"Wrote {len(payload['points'])} points, {len(payload['regimes'])} regimes to {out_path}")
 
 
+def _cmd_documents(args: argparse.Namespace) -> None:
+    import json
+
+    details = build_all_document_details(Path(args.input_dir), Path(args.scores))
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for detail in details:
+        (out_dir / f"{detail['doc_id']}.json").write_text(json.dumps(detail))
+    print(f"Wrote {len(details)} document detail files to {out_dir}")
+
+
+def _cmd_fetch_fedfunds(args: argparse.Namespace) -> None:
+    import json
+
+    df = fetch_fedfunds()
+    payload = build_fedfunds_payload(df)
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(payload, indent=2))
+    print(f"Wrote {len(payload['points'])} monthly Fed funds rate points to {out_path}")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fed-sentiment-analyzer")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -133,6 +159,20 @@ def build_parser() -> argparse.ArgumentParser:
     p_history.add_argument("--window", type=int, default=3, help="Rolling average window, in documents")
     p_history.add_argument("--gap-threshold-days", type=int, default=180, help="Gap size that breaks the line/adds a gap annotation")
     p_history.set_defaults(func=_cmd_history)
+
+    p_documents = subparsers.add_parser(
+        "documents", help="Build per-document JSON detail (text + highlighted phrase spans) served by GET /api/documents/{doc_id}"
+    )
+    p_documents.add_argument("--input-dir", default="data/raw/minutes")
+    p_documents.add_argument("--scores", required=True, help="CSV produced by `analyze`")
+    p_documents.add_argument("--out", required=True, help="Output directory, e.g. backend/app/static/documents/")
+    p_documents.set_defaults(func=_cmd_documents)
+
+    p_fedfunds = subparsers.add_parser(
+        "fetch-fedfunds", help="Fetch the historical effective Fed funds rate from FRED and build the GET /api/fedfunds payload"
+    )
+    p_fedfunds.add_argument("--out", required=True, help="Output JSON path, e.g. backend/app/static/fedfunds.json")
+    p_fedfunds.set_defaults(func=_cmd_fetch_fedfunds)
 
     return parser
 

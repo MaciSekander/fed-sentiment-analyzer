@@ -126,6 +126,15 @@ class LexiconResult:
     word_count: int
 
 
+@dataclass
+class PhraseMatch:
+    phrase: str
+    category: str  # "hawkish" | "dovish"
+    start: int
+    end: int
+    weight: float
+
+
 def _compile(phrases: dict[str, float]) -> list[tuple[re.Pattern, float]]:
     compiled = []
     for phrase, weight in phrases.items():
@@ -232,3 +241,47 @@ def score_text(text: str, date: str | None = None, threshold: float = DEFAULT_TH
     if date is not None and date < CLASSIC_ERA_CUTOFF:
         return _score_classic(normalized, word_count, threshold)
     return _score_modern(normalized, word_count, threshold)
+
+
+def _whitespace_tolerant_pattern(phrase: str) -> re.Pattern:
+    words = [re.escape(w) for w in phrase.split()]
+    return re.compile(r"\b" + r"\s+".join(words) + r"\b", re.IGNORECASE)
+
+
+def _merge_overlapping_spans(matches: list[PhraseMatch]) -> list[PhraseMatch]:
+    """Keep the longer span when two matches overlap (e.g. "downside risks"
+    is a prefix of "downside risks to growth", both in DOVISH_PHRASES) --
+    otherwise a displayed document would show two overlapping highlights
+    for what a reader sees as one phrase.
+    """
+    ordered = sorted(matches, key=lambda m: (m.start, -(m.end - m.start)))
+    merged: list[PhraseMatch] = []
+    for m in ordered:
+        if merged and m.start < merged[-1].end:
+            continue
+        merged.append(m)
+    return merged
+
+
+def find_phrase_spans(text: str, date: str | None = None) -> list[PhraseMatch]:
+    """Find phrase match positions in the *original* (non-normalized) text,
+    for highlighting in a displayed document. Unlike score_text (which
+    normalizes whitespace first since it only needs counts), this needs
+    offsets valid against the exact text being shown -- so it matches
+    directly against the source using whitespace-tolerant patterns
+    (`\\s+` between words) rather than normalizing and translating offsets
+    back, which handles a phrase landing across a hard line-wrap for free.
+    """
+    if date is not None and date < CLASSIC_ERA_CUTOFF:
+        hawkish_phrases, dovish_phrases = CLASSIC_HAWKISH_PHRASES, CLASSIC_DOVISH_PHRASES
+    else:
+        hawkish_phrases, dovish_phrases = HAWKISH_PHRASES, DOVISH_PHRASES
+
+    matches: list[PhraseMatch] = []
+    for phrases, category in ((hawkish_phrases, HAWKISH_LABEL), (dovish_phrases, DOVISH_LABEL)):
+        for phrase, weight in phrases.items():
+            pattern = _whitespace_tolerant_pattern(phrase)
+            for m in pattern.finditer(text):
+                matches.append(PhraseMatch(phrase=phrase, category=category, start=m.start(), end=m.end(), weight=weight))
+
+    return _merge_overlapping_spans(matches)

@@ -13,13 +13,12 @@ import {
   YAxis,
 } from "recharts";
 import type { HistoryResponse } from "../api";
+import { HISTORY_CHART_SYNC_ID, parseDateToTs as toTs } from "../lib/chartTime";
 
 interface Props {
   history: HistoryResponse;
-}
-
-function toTs(date: string | null): number | null {
-  return date ? Date.parse(`${date}T00:00:00Z`) : null;
+  domain: [number, number];
+  onSelectDocument?: (docId: string) => void;
 }
 
 function chairLastName(chair: string): string {
@@ -46,11 +45,12 @@ function TimelineTooltip({ active, payload }: { active?: boolean; payload?: { pa
       <div className={`label-${point.label ?? "neutral"}`}>
         score {point.score.toFixed(3)} ({point.label})
       </div>
+      {point.doc_id && <div className="timeline-tooltip-hint">Click to read the source document</div>}
     </div>
   );
 }
 
-export default function Timeline({ history }: Props) {
+export default function Timeline({ history, domain, onSelectDocument }: Props) {
   const chartData = useMemo<ChartPoint[]>(
     () =>
       history.points.map((p) => ({
@@ -64,16 +64,14 @@ export default function Timeline({ history }: Props) {
     [history.points],
   );
 
-  const domain = useMemo<[number, number]>(() => {
-    const dataTs = chartData.map((d) => d.ts).filter((t) => t > 0);
-    const regimeTs = history.regimes.flatMap((r) => {
-      const start = toTs(r.start);
-      const end = r.end ? toTs(r.end) : Date.now();
-      return [start, end].filter((t): t is number => t !== null);
-    });
-    const all = [...dataTs, ...regimeTs];
-    return [Math.min(...all), Math.max(...all)];
-  }, [chartData, history.regimes]);
+  // Recharts' onClick event type varies across chart element types and
+  // isn't easily named from the outside -- read defensively instead.
+  function handleClick(state: unknown) {
+    const point = (state as { activePayload?: { payload: ChartPoint }[] } | null)?.activePayload?.[0]?.payload;
+    if (point?.doc_id) {
+      onSelectDocument?.(point.doc_id);
+    }
+  }
 
   const gradientOffset = useMemo(() => {
     const values = chartData.map((d) => d.rolling).filter((v): v is number => v !== null);
@@ -87,7 +85,14 @@ export default function Timeline({ history }: Props) {
   return (
     <div className="timeline">
       <ResponsiveContainer width="100%" height={380}>
-        <ComposedChart data={chartData} margin={{ top: 8, right: 12, left: -8, bottom: 0 }}>
+        <ComposedChart
+          data={chartData}
+          margin={{ top: 8, right: 12, left: -8, bottom: 0 }}
+          syncId={HISTORY_CHART_SYNC_ID}
+          syncMethod="value"
+          onClick={handleClick}
+          className={onSelectDocument ? "chart-clickable" : undefined}
+        >
           <defs>
             <linearGradient id="rollingFill" x1="0" y1="0" x2="0" y2="1">
               <stop offset={gradientOffset} style={{ stopColor: "var(--hawkish)", stopOpacity: 0.18 }} />
