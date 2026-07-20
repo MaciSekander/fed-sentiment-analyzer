@@ -3313,434 +3313,18 @@
       "chair": "Ben Bernanke"
     },
     {
-      "doc_id": "2008-04-30-fomc-minutes",
-      "date": "2008-04-30",
-      "combined_score": -0.0942,
-      "combined_score_rolling": -0.06156666666666671,
-      "combined_label": "neutral",
+      "doc_id": null,
+      "date": "2011-08-23",
+      "combined_score": null,
+      "combined_score_rolling": null,
+      "combined_label": null,
       "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2008-08-05-fomc-minutes",
-      "date": "2008-08-05",
-      "combined_score": -0.0653,
-      "combined_score_rolling": -0.08333333333333337,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2008-09-16-fomc-minutes",
-      "date": "2008-09-16",
-      "combined_score": -0.0561,
-      "combined_score_rolling": -0.0718666666666667,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2008-10-29-fomc-minutes",
-      "date": "2008-10-29",
-      "combined_score": -0.0692,
-      "combined_score_rolling": -0.06353333333333337,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2008-12-16-fomc-minutes",
-      "date": "2008-12-16",
-      "combined_score": -0.0231,
-      "combined_score_rolling": -0.04946666666666671,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-01-28-fomc-minutes",
-      "date": "2009-01-28",
-      "combined_score": -0.0372,
-      "combined_score_rolling": -0.04316666666666671,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-03-18-fomc-minutes",
-      "date": "2009-03-18",
-      "combined_score": -0.0158,
-      "combined_score_rolling": -0.025366666666666704,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-04-29-fomc-minutes",
-      "date": "2009-04-29",
-      "combined_score": -0.0213,
-      "combined_score_rolling": -0.024766666666666704,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-06-24-fomc-minutes",
-      "date": "2009-06-24",
-      "combined_score": -0.0173,
-      "combined_score_rolling": -0.018133333333333373,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-08-12-fomc-minutes",
-      "date": "2009-08-12",
-      "combined_score": -0.0515,
-      "combined_score_rolling": -0.030033333333333367,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-09-23-fomc-minutes",
-      "date": "2009-09-23",
-      "combined_score": -0.0211,
-      "combined_score_rolling": -0.0299666666666667,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-11-04-fomc-minutes",
-      "date": "2009-11-04",
-      "combined_score": -0.0509,
-      "combined_score_rolling": -0.041166666666666706,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2009-12-16-fomc-minutes",
-      "date": "2009-12-16",
-      "combined_score": -0.0133,
-      "combined_score_rolling": -0.028433333333333366,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-01-27-fomc-minutes",
-      "date": "2010-01-27",
-      "combined_score": -0.0426,
-      "combined_score_rolling": -0.03560000000000003,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-03-16-fomc-minutes",
-      "date": "2010-03-16",
-      "combined_score": -0.04,
-      "combined_score_rolling": -0.0319666666666667,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-04-28-fomc-minutes",
-      "date": "2010-04-28",
-      "combined_score": -0.0421,
-      "combined_score_rolling": -0.041566666666666696,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-06-23-fomc-minutes",
-      "date": "2010-06-23",
-      "combined_score": -0.0816,
-      "combined_score_rolling": -0.0545666666666667,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-08-10-fomc-minutes",
-      "date": "2010-08-10",
-      "combined_score": -0.1097,
-      "combined_score_rolling": -0.07780000000000004,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-09-21-fomc-minutes",
-      "date": "2010-09-21",
-      "combined_score": -0.0637,
-      "combined_score_rolling": -0.08500000000000003,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-11-03-fomc-minutes",
-      "date": "2010-11-03",
-      "combined_score": -0.0148,
-      "combined_score_rolling": -0.06273333333333338,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2010-12-14-fomc-minutes",
-      "date": "2010-12-14",
-      "combined_score": -0.134,
-      "combined_score_rolling": -0.07083333333333337,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-01-26-fomc-minutes",
-      "date": "2011-01-26",
-      "combined_score": -0.047,
-      "combined_score_rolling": -0.06526666666666671,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-03-15-fomc-minutes",
-      "date": "2011-03-15",
-      "combined_score": -0.0633,
-      "combined_score_rolling": -0.08143333333333337,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-04-27-fomc-minutes",
-      "date": "2011-04-27",
-      "combined_score": 0.0088,
-      "combined_score_rolling": -0.03383333333333337,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-06-22-fomc-minutes",
-      "date": "2011-06-22",
-      "combined_score": -0.0149,
-      "combined_score_rolling": -0.023133333333333367,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-08-09-fomc-minutes",
-      "date": "2011-08-09",
-      "combined_score": -0.0722,
-      "combined_score_rolling": -0.026100000000000036,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-09-21-fomc-minutes",
-      "date": "2011-09-21",
-      "combined_score": -0.0661,
-      "combined_score_rolling": -0.051066666666666705,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-11-02-fomc-minutes",
-      "date": "2011-11-02",
-      "combined_score": -0.0675,
-      "combined_score_rolling": -0.06860000000000004,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2011-12-13-fomc-minutes",
-      "date": "2011-12-13",
-      "combined_score": -0.0773,
-      "combined_score_rolling": -0.07030000000000003,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-01-25-fomc-minutes",
-      "date": "2012-01-25",
-      "combined_score": -0.1053,
-      "combined_score_rolling": -0.0833666666666667,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-03-13-fomc-minutes",
-      "date": "2012-03-13",
-      "combined_score": -0.211,
-      "combined_score_rolling": -0.13120000000000004,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-04-25-fomc-minutes",
-      "date": "2012-04-25",
-      "combined_score": -0.2461,
-      "combined_score_rolling": -0.1874666666666667,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-06-20-fomc-minutes",
-      "date": "2012-06-20",
-      "combined_score": -0.1946,
-      "combined_score_rolling": -0.2172333333333334,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-08-01-fomc-minutes",
-      "date": "2012-08-01",
-      "combined_score": -0.1581,
-      "combined_score_rolling": -0.19960000000000003,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-09-13-fomc-minutes",
-      "date": "2012-09-13",
-      "combined_score": -0.1077,
-      "combined_score_rolling": -0.15346666666666672,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-10-24-fomc-minutes",
-      "date": "2012-10-24",
-      "combined_score": -0.1946,
-      "combined_score_rolling": -0.15346666666666672,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2012-12-12-fomc-minutes",
-      "date": "2012-12-12",
-      "combined_score": -0.1572,
-      "combined_score_rolling": -0.1531666666666667,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-01-30-fomc-minutes",
-      "date": "2013-01-30",
-      "combined_score": -0.1649,
-      "combined_score_rolling": -0.17223333333333338,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-03-20-fomc-minutes",
-      "date": "2013-03-20",
-      "combined_score": -0.225,
-      "combined_score_rolling": -0.1823666666666667,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-05-01-fomc-minutes",
-      "date": "2013-05-01",
-      "combined_score": -0.1571,
-      "combined_score_rolling": -0.18233333333333338,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-06-19-fomc-minutes",
-      "date": "2013-06-19",
-      "combined_score": -0.177,
-      "combined_score_rolling": -0.1863666666666667,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-07-31-fomc-minutes",
-      "date": "2013-07-31",
-      "combined_score": -0.2567,
-      "combined_score_rolling": -0.19693333333333338,
-      "combined_label": "dovish",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-09-18-fomc-minutes",
-      "date": "2013-09-18",
-      "combined_score": -0.1349,
-      "combined_score_rolling": -0.18953333333333336,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-10-30-fomc-minutes",
-      "date": "2013-10-30",
-      "combined_score": -0.147,
-      "combined_score_rolling": -0.17953333333333335,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2013-12-18-fomc-minutes",
-      "date": "2013-12-18",
-      "combined_score": -0.1399,
-      "combined_score_rolling": -0.14060000000000003,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2014-01-29-fomc-minutes",
-      "date": "2014-01-29",
-      "combined_score": -0.0838,
-      "combined_score_rolling": -0.1235666666666667,
-      "combined_label": "neutral",
-      "chair": "Ben Bernanke"
-    },
-    {
-      "doc_id": "2014-03-19-fomc-minutes",
-      "date": "2014-03-19",
-      "combined_score": -0.0425,
-      "combined_score_rolling": -0.08873333333333337,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
-    },
-    {
-      "doc_id": "2014-04-30-fomc-minutes",
-      "date": "2014-04-30",
-      "combined_score": -0.0717,
-      "combined_score_rolling": -0.06600000000000004,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
-    },
-    {
-      "doc_id": "2014-06-18-fomc-minutes",
-      "date": "2014-06-18",
-      "combined_score": -0.0329,
-      "combined_score_rolling": -0.04903333333333337,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
-    },
-    {
-      "doc_id": "2014-07-30-fomc-minutes",
-      "date": "2014-07-30",
-      "combined_score": -0.0176,
-      "combined_score_rolling": -0.04073333333333337,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
-    },
-    {
-      "doc_id": "2014-09-17-fomc-minutes",
-      "date": "2014-09-17",
-      "combined_score": -0.0474,
-      "combined_score_rolling": -0.032633333333333375,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
-    },
-    {
-      "doc_id": "2014-10-29-fomc-minutes",
-      "date": "2014-10-29",
-      "combined_score": -0.0497,
-      "combined_score_rolling": -0.038233333333333376,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
-    },
-    {
-      "doc_id": "2014-12-17-fomc-minutes",
-      "date": "2014-12-17",
-      "combined_score": -0.0454,
-      "combined_score_rolling": -0.04750000000000004,
-      "combined_label": "neutral",
-      "chair": "Janet Yellen"
     },
     {
       "doc_id": "2015-01-28-fomc-minutes",
       "date": "2015-01-28",
       "combined_score": -0.0145,
-      "combined_score_rolling": -0.036533333333333376,
+      "combined_score_rolling": -0.03500000000000004,
       "combined_label": "neutral",
       "chair": "Janet Yellen"
     },
@@ -3748,7 +3332,7 @@
       "doc_id": "2015-03-18-fomc-minutes",
       "date": "2015-03-18",
       "combined_score": 0.1398,
-      "combined_score_rolling": 0.026633333333333297,
+      "combined_score_rolling": 0.011599999999999966,
       "combined_label": "neutral",
       "chair": "Janet Yellen"
     },
@@ -3756,7 +3340,7 @@
       "doc_id": "2015-04-29-fomc-minutes",
       "date": "2015-04-29",
       "combined_score": 0.1077,
-      "combined_score_rolling": 0.07766666666666662,
+      "combined_score_rolling": 0.07766666666666665,
       "combined_label": "neutral",
       "chair": "Janet Yellen"
     },
@@ -4263,214 +3847,6 @@
       "combined_score_rolling": 0.15706666666666666,
       "combined_label": "hawkish",
       "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2023-05-03-fomc-minutes",
-      "date": "2023-05-03",
-      "combined_score": 0.1887,
-      "combined_score_rolling": 0.17786666666666665,
-      "combined_label": "hawkish",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2023-06-14-fomc-minutes",
-      "date": "2023-06-14",
-      "combined_score": 0.0854,
-      "combined_score_rolling": 0.14983333333333332,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2023-07-26-fomc-minutes",
-      "date": "2023-07-26",
-      "combined_score": 0.169,
-      "combined_score_rolling": 0.14769999999999997,
-      "combined_label": "hawkish",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2023-09-20-fomc-minutes",
-      "date": "2023-09-20",
-      "combined_score": 0.126,
-      "combined_score_rolling": 0.1268,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2023-11-01-fomc-minutes",
-      "date": "2023-11-01",
-      "combined_score": 0.1194,
-      "combined_score_rolling": 0.1381333333333333,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2023-12-13-fomc-minutes",
-      "date": "2023-12-13",
-      "combined_score": 0.1759,
-      "combined_score_rolling": 0.1404333333333333,
-      "combined_label": "hawkish",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-01-31-fomc-minutes",
-      "date": "2024-01-31",
-      "combined_score": 0.0808,
-      "combined_score_rolling": 0.12536666666666665,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-03-20-fomc-minutes",
-      "date": "2024-03-20",
-      "combined_score": 0.063,
-      "combined_score_rolling": 0.10656666666666664,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-05-01-fomc-minutes",
-      "date": "2024-05-01",
-      "combined_score": 0.0509,
-      "combined_score_rolling": 0.06489999999999997,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-06-12-fomc-minutes",
-      "date": "2024-06-12",
-      "combined_score": 0.0327,
-      "combined_score_rolling": 0.04886666666666664,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-07-31-fomc-minutes",
-      "date": "2024-07-31",
-      "combined_score": 0.0119,
-      "combined_score_rolling": 0.031833333333333304,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-09-18-fomc-minutes",
-      "date": "2024-09-18",
-      "combined_score": -0.1376,
-      "combined_score_rolling": -0.031000000000000028,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-11-07-fomc-minutes",
-      "date": "2024-11-07",
-      "combined_score": -0.0747,
-      "combined_score_rolling": -0.06680000000000003,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2024-12-18-fomc-minutes",
-      "date": "2024-12-18",
-      "combined_score": -0.0407,
-      "combined_score_rolling": -0.08433333333333337,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-01-29-fomc-minutes",
-      "date": "2025-01-29",
-      "combined_score": -0.008,
-      "combined_score_rolling": -0.04113333333333336,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-03-19-fomc-minutes",
-      "date": "2025-03-19",
-      "combined_score": -0.0124,
-      "combined_score_rolling": -0.020366666666666696,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-05-07-fomc-minutes",
-      "date": "2025-05-07",
-      "combined_score": -0.0303,
-      "combined_score_rolling": -0.01690000000000003,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-06-18-fomc-minutes",
-      "date": "2025-06-18",
-      "combined_score": 0.027,
-      "combined_score_rolling": -0.0052333333333333615,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-07-30-fomc-minutes",
-      "date": "2025-07-30",
-      "combined_score": -0.0169,
-      "combined_score_rolling": -0.006733333333333362,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-09-17-fomc-minutes",
-      "date": "2025-09-17",
-      "combined_score": -0.2219,
-      "combined_score_rolling": -0.07060000000000002,
-      "combined_label": "dovish",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-10-29-fomc-minutes",
-      "date": "2025-10-29",
-      "combined_score": -0.1861,
-      "combined_score_rolling": -0.14163333333333336,
-      "combined_label": "dovish",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2025-12-10-fomc-minutes",
-      "date": "2025-12-10",
-      "combined_score": -0.2074,
-      "combined_score_rolling": -0.20513333333333336,
-      "combined_label": "dovish",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2026-01-28-fomc-minutes",
-      "date": "2026-01-28",
-      "combined_score": -0.138,
-      "combined_score_rolling": -0.1771666666666667,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2026-03-18-fomc-minutes",
-      "date": "2026-03-18",
-      "combined_score": -0.1279,
-      "combined_score_rolling": -0.1577666666666667,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2026-04-29-fomc-minutes",
-      "date": "2026-04-29",
-      "combined_score": -0.0728,
-      "combined_score_rolling": -0.11290000000000004,
-      "combined_label": "neutral",
-      "chair": "Jerome Powell"
-    },
-    {
-      "doc_id": "2026-06-17-fomc-minutes",
-      "date": "2026-06-17",
-      "combined_score": -0.0168,
-      "combined_score_rolling": -0.07250000000000004,
-      "combined_label": "neutral",
-      "chair": "Kevin Warsh"
     }
   ],
   "regimes": [
@@ -4522,6 +3898,12 @@
   ],
   "annotations": [
     {
+      "type": "gap",
+      "start": "2008-03-18",
+      "end": "2015-01-28",
+      "label": "No archive coverage"
+    },
+    {
       "type": "low_signal",
       "start": null,
       "end": "1994-01-01",
@@ -4530,14 +3912,14 @@
   ],
   "highlights": {
     "current": {
-      "doc_id": "2026-06-17-fomc-minutes",
-      "date": "2026-06-17",
-      "combined_score": -0.0168,
-      "combined_score_rolling": -0.07250000000000004,
-      "combined_label": "neutral",
-      "chair": "Kevin Warsh"
+      "doc_id": "2023-03-22-fomc-minutes",
+      "date": "2023-03-22",
+      "combined_score": 0.1754,
+      "combined_score_rolling": 0.15706666666666666,
+      "combined_label": "hawkish",
+      "chair": "Jerome Powell"
     },
-    "trailing_year_average": -0.10675555555555555,
+    "trailing_year_average": 0.17454999999999998,
     "hawkish_streak": {
       "length": 35,
       "start_date": "1977-09-20",
@@ -4600,23 +3982,18 @@
       },
       {
         "chair": "Janet Yellen",
-        "average_score": 0.0201,
-        "meeting_count": 32
+        "average_score": 0.038,
+        "meeting_count": 25
       },
       {
         "chair": "Jerome Powell",
-        "average_score": 0.0083,
-        "meeting_count": 66
+        "average_score": 0.0169,
+        "meeting_count": 41
       },
       {
         "chair": "Paul Volcker",
         "average_score": -0.0158,
         "meeting_count": 76
-      },
-      {
-        "chair": "Kevin Warsh",
-        "average_score": -0.0168,
-        "meeting_count": 1
       },
       {
         "chair": "Alan Greenspan",
@@ -4630,11 +4007,11 @@
       },
       {
         "chair": "Ben Bernanke",
-        "average_score": -0.0906,
-        "meeting_count": 68
+        "average_score": -0.0836,
+        "meeting_count": 22
       }
     ]
   },
   "window": 3,
-  "generated_at": "2026-07-14T21:40:41.838456+00:00"
+  "generated_at": "2026-07-20T15:08:31.036844+00:00"
 }
