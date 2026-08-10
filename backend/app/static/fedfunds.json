@@ -3455,9 +3455,13 @@
     {
       "date": "2026-06-01",
       "rate": 3.63
+    },
+    {
+      "date": "2026-07-01",
+      "rate": 3.63
     }
   ],
   "series_id": "FEDFUNDS",
   "source": "FRED (Federal Reserve Bank of St. Louis)",
-  "generated_at": "2026-08-03T15:41:43.619880+00:00"
+  "generated_at": "2026-08-10T14:19:42.294871+00:00"
 }
