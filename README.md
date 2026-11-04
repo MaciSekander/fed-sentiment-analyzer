@@ -1,5 +1,11 @@
 # Fed Sentiment Analyzer
 
+[![Test & deploy](https://github.com/MaciSekander/fed-sentiment-analyzer/actions/workflows/deploy-space.yml/badge.svg)](https://github.com/MaciSekander/fed-sentiment-analyzer/actions/workflows/deploy-space.yml)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![NLP](https://img.shields.io/badge/NLP-FOMC--RoBERTa-yellow)
+![Docker](https://img.shields.io/badge/deploy-Docker%20%7C%20HF%20Spaces-2496ED)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 Analyze whether FOMC minutes and Federal Reserve speeches lean **hawkish**
 (favoring tighter policy / higher rates to fight inflation) or **dovish**
 (favoring looser policy / lower rates to support growth), using historical
